@@ -1,4 +1,4 @@
-baseURL = 'https://omniview.dev/'
+baseURL = 'https://docs.omniview.dev/'
 languageCode = 'en-us'
 title = 'Omniview - The Integration DevOps Environment'
 
