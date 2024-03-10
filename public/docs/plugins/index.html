@@ -14,7 +14,7 @@
 
 <html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
-    <title>Docs | Omniview - The Integration DevOps Environment</title>
+    <title>Plugins | Omniview - The Integration DevOps Environment</title>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Documentation, Hugo, Hugo Theme, Bootstrap" />
@@ -29,13 +29,15 @@
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="manifest" crossorigin="use-credentials" href="http://localhost:1313/site.webmanifest">
-<meta property="og:title" content="Docs" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/docs/" /><meta property="og:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_7086032896542432554.png"/><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_7086032896542432554.png"/>
-<meta name="twitter:title" content="Docs"/>
-<meta name="twitter:description" content=""/>
+<meta property="og:title" content="Plugins" />
+<meta property="og:description" content="Omniview Plugin Types: Extending the DevOps IDE linkOmniview&rsquo;s powerful and flexible plugin system is designed to cater to a wide range of DevOps needs, enabling users to extend the IDE&rsquo;s core functionalities with custom plugins. These plugins allow for the integration of additional tools, services, and functionalities, making Omniview a highly customizable and versatile platform for DevOps engineers. Below, we detail the various plugin types supported by Omniview, along with examples and use cases for each." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/docs/plugins/" /><meta property="og:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_15582234406548733032.png"/><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2024-03-09T16:57:24-06:00" />
+<meta property="article:modified_time" content="2024-03-09T16:57:24-06:00" /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_15582234406548733032.png"/>
+<meta name="twitter:title" content="Plugins"/>
+<meta name="twitter:description" content="Omniview Plugin Types: Extending the DevOps IDE linkOmniview&rsquo;s powerful and flexible plugin system is designed to cater to a wide range of DevOps needs, enabling users to extend the IDE&rsquo;s core functionalities with custom plugins. These plugins allow for the integration of additional tools, services, and functionalities, making Omniview a highly customizable and versatile platform for DevOps engineers. Below, we detail the various plugin types supported by Omniview, along with examples and use cases for each."/>
 
     
     <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
@@ -99,7 +101,7 @@
                 
                     
                         
-                        <li class="">
+                        <li class="current">
                             <a class="sidebar-root-link" href="http://localhost:1313/docs/plugins/">
                                 
                                 Plugins
@@ -232,10 +234,18 @@
                                     <div class="d-md-flex justify-content-between align-items-center"><nav aria-label="breadcrumb" class="d-inline-block pb-2 mt-1 mt-sm-0">
     <ul id="breadcrumbs" class="breadcrumb bg-transparent mb-0" itemscope itemtype="https://schema.org/BreadcrumbList">
         
+            
+                <li class="breadcrumb-item text-capitalize active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/docs/">
+                        <i class="material-icons size-20 align-text-bottom" itemprop="name">Home</i>
+                    </a>
+                    <meta itemprop="position" content='1' />
+                </li>
+            
         
-            <li class="breadcrumb-item text-capitalize active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <i class="material-icons size-20 align-text-bottom" itemprop="name">Home</i>
-                <meta itemprop="position" content='1' />
+            <li class="breadcrumb-item text-capitalize active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">Plugins</span>
+                <meta itemprop="position" content='2' />
             </li>
         
     </ul>
@@ -243,137 +253,189 @@
                                 
                                 <div class="row flex-xl-nowrap">
                                     
-                                    <div class="docs-toc col-xl-3 visually-hidden visually-hidden  d-xl-block"><toc>
+                                    <div class="docs-toc col-xl-3    d-xl-block"><toc>
     <div class="fw-bold text-uppercase mb-2">On this page</div>
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#resource-plugins">Resource Plugins</a></li>
+    <li><a href="#log-plugins">Log Plugins</a></li>
+    <li><a href="#metric-plugins">Metric Plugins</a></li>
+    <li><a href="#event-plugins">Event Plugins</a></li>
+    <li><a href="#exec-plugins">Exec Plugins</a></li>
+    <li><a href="#editor-plugins">Editor Plugins</a></li>
+    <li><a href="#visualization-plugins">Visualization Plugins</a></li>
+    <li><a href="#analyzer-plugins">Analyzer Plugins</a></li>
+    <li><a href="#manager-plugins">Manager Plugins</a></li>
+  </ul>
+</nav>
     </toc></div>
                                     
                                     
-                                    <div class="docs-toc-mobile visually-hidden visually-hidden  d-print-none d-xl-none">
+                                    <div class="docs-toc-mobile    d-print-none d-xl-none">
                                         <button id="toc-dropdown-btn" class="btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-offset="0,0" aria-expanded="false">
                                             Table of Contents
                                         </button>
-<nav id="toc-mobile"></nav></div>
-                                    <div class="docs-content col-12  mt-0">
+<nav id="toc-mobile">
+  <ul class="dropdown-menu">
+    <li><a href="#resource-plugins">Resource Plugins</a></li>
+    <li><a href="#log-plugins">Log Plugins</a></li>
+    <li><a href="#metric-plugins">Metric Plugins</a></li>
+    <li><a href="#event-plugins">Event Plugins</a></li>
+    <li><a href="#exec-plugins">Exec Plugins</a></li>
+    <li><a href="#editor-plugins">Editor Plugins</a></li>
+    <li><a href="#visualization-plugins">Visualization Plugins</a></li>
+    <li><a href="#analyzer-plugins">Analyzer Plugins</a></li>
+    <li><a href="#manager-plugins">Manager Plugins</a></li>
+  </ul>
+</nav></div>
+                                    <div class="docs-content col-12 col-xl-9 mt-0">
                                         <div class="mb-0 d-flex">
                                             
                                             <h1 class="content-title mb-0">
-                                                Docs
+                                                Plugins
                                                 
                                             </h1>
                                         </div>
                                         
                                         <div id="content" class="main-content" >
                                             
-    <div class="row flex-xl-wrap">
-        
-        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
-            <a class="text-decoration-none text-reset" href="http://localhost:1313/docs/introduction/">
-                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
-                    <span class="icon-color d-flex my-3">
-                        <i class="material-icons align-middle">article</i>
-                        
-                        
-                    </span>
-                    <div class="card-body p-0 content">
-                        <p class="fs-5 fw-semibold card-title mb-1">Introduction</p>
-                        <p class="para card-text mb-0"></p>
-                    </div>
-                    
-                </div>
-            </a>
-        </div>
-        
-        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
-            <a class="text-decoration-none text-reset" href="http://localhost:1313/docs/getting-started/">
-                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
-                    <span class="icon-color d-flex my-3">
-                        <i class="material-icons align-middle">article</i>
-                        
-                        
-                    </span>
-                    <div class="card-body p-0 content">
-                        <p class="fs-5 fw-semibold card-title mb-1">Getting Started</p>
-                        <p class="para card-text mb-0"></p>
-                    </div>
-                    
-                </div>
-            </a>
-        </div>
-        
-        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
-            <a class="text-decoration-none text-reset" href="http://localhost:1313/docs/core-concepts/">
-                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
-                    <span class="icon-color d-flex my-3">
-                        <i class="material-icons align-middle">article</i>
-                        
-                        
-                    </span>
-                    <div class="card-body p-0 content">
-                        <p class="fs-5 fw-semibold card-title mb-1">Core Concepts</p>
-                        <p class="para card-text mb-0"></p>
-                    </div>
-                    
-                </div>
-            </a>
-        </div>
-        
-        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
-            <a class="text-decoration-none text-reset" href="http://localhost:1313/docs/plugins/">
-                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
-                    <span class="icon-color d-flex my-3">
-                        <i class="material-icons align-middle">article</i>
-                        
-                        
-                    </span>
-                    <div class="card-body p-0 content">
-                        <p class="fs-5 fw-semibold card-title mb-1">Plugins</p>
-                        <p class="para card-text mb-0"></p>
-                    </div>
-                    
-                </div>
-            </a>
-        </div>
-        
-        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
-            <a class="text-decoration-none text-reset" href="http://localhost:1313/docs/key-features/">
-                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
-                    <span class="icon-color d-flex my-3">
-                        <i class="material-icons align-middle">article</i>
-                        
-                        
-                    </span>
-                    <div class="card-body p-0 content">
-                        <p class="fs-5 fw-semibold card-title mb-1">Key Features</p>
-                        <p class="para card-text mb-0"></p>
-                    </div>
-                    
-                </div>
-            </a>
-        </div>
-        
-        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
-            <a class="text-decoration-none text-reset" href="http://localhost:1313/docs/philosphy/">
-                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
-                    <span class="icon-color d-flex my-3">
-                        <i class="material-icons align-middle">article</i>
-                        
-                        
-                    </span>
-                    <div class="card-body p-0 content">
-                        <p class="fs-5 fw-semibold card-title mb-1">Philosphy</p>
-                        <p class="para card-text mb-0"></p>
-                    </div>
-                    
-                </div>
-            </a>
-        </div>
-        
+    
+    <div data-prismjs-copy="" data-prismjs-copy-success="" data-prismjs-copy-error="">
+        <h1 id="omniview-plugin-types-extending-the-devops-ide">Omniview Plugin Types: Extending the DevOps IDE <a href="#omniview-plugin-types-extending-the-devops-ide" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h1><p>Omniview&rsquo;s powerful and flexible plugin system is designed to cater to a wide range of DevOps needs, enabling users to extend the IDE&rsquo;s core functionalities with custom plugins. These plugins allow for the integration of additional tools, services, and functionalities, making Omniview a highly customizable and versatile platform for DevOps engineers. Below, we detail the various plugin types supported by Omniview, along with examples and use cases for each.</p>
+<h2 id="resource-plugins">Resource Plugins <a href="#resource-plugins" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p><strong>Description</strong>: Resource plugins enable interaction with and management of various infrastructure resources. These plugins can list, create, update, delete, and watch resources, providing a seamless interface for infrastructure management within Omniview.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>AWS Plugin</strong>: Manages AWS resources such as EC2 instances, S3 buckets, and RDS databases.</li>
+<li><strong>Google Cloud Plugin</strong>: Interacts with Google Cloud resources like Compute Engine VMs, Cloud Storage, and BigQuery datasets.</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Provisioning and managing cloud resources directly from Omniview.</li>
+<li>Automating resource lifecycle workflows such as scaling, backups, and updates.</li>
+</ul>
+<h2 id="log-plugins">Log Plugins <a href="#log-plugins" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p><strong>Description</strong>: Log plugins focus on querying and displaying logs from various sources. They enable users to access and analyze log data from within Omniview, facilitating troubleshooting and monitoring.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>Loki Plugin</strong>: Integrates with Grafana Loki to fetch and display logs.</li>
+<li><strong>CloudWatch Logs Plugin</strong>: Retrieves and displays logs from AWS CloudWatch.</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Centralized log management for easier debugging and monitoring.</li>
+<li>Real-time log tailing for active systems and applications.</li>
+</ul>
+<h2 id="metric-plugins">Metric Plugins <a href="#metric-plugins" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p><strong>Description</strong>: Metric plugins provide capabilities for querying and visualizing metrics. These plugins are crucial for monitoring the performance and health of infrastructure and applications.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>Prometheus Plugin</strong>: Queries and displays metrics from Prometheus.</li>
+<li><strong>Datadog Plugin</strong>: Integrates with Datadog to visualize metrics and alerts.</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Dashboarding and real-time monitoring of system and application metrics.</li>
+<li>Performance analysis and capacity planning.</li>
+</ul>
+<h2 id="event-plugins">Event Plugins <a href="#event-plugins" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p><strong>Description</strong>: Event plugins allow for the emission, listening, and handling of events within Omniview. These can be global events, resource-specific events, or interactions between resources.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>Kubernetes Events Plugin</strong>: Displays events from Kubernetes clusters.</li>
+<li><strong>Webhook Receiver Plugin</strong>: Listens for external webhooks and triggers actions within Omniview.</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Monitoring and alerting on specific events related to infrastructure changes.</li>
+<li>Automating workflows based on event triggers.</li>
+</ul>
+<h2 id="exec-plugins">Exec Plugins <a href="#exec-plugins" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p><strong>Description</strong>: Exec plugins offer terminal access or command execution capabilities for resources. They are essential for performing direct operations on machines or containers.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>SSH Plugin</strong>: Provides SSH access to virtual machines.</li>
+<li><strong>Kubectl Exec Plugin</strong>: Executes commands in Kubernetes pods using kubectl.</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Remote management and troubleshooting of servers and containers.</li>
+<li>Executing scripts or commands as part of deployment or maintenance tasks.</li>
+</ul>
+<h2 id="editor-plugins">Editor Plugins <a href="#editor-plugins" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p><strong>Description</strong>: Editor plugins enhance the text editing capabilities of Omniview, allowing for specialized editing features tailored to specific languages or configurations.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>Terraform Editor Plugin</strong>: Adds syntax highlighting, formatting, and validation for Terraform files.</li>
+<li><strong>YAML/JSON Editor Plugin</strong>: Enhances editing experiences for YAML and JSON files with auto-completion and error detection.</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Improving productivity and reducing errors in configuration file management.</li>
+<li>Customizing the editing experience for specific languages or file formats.</li>
+</ul>
+<h2 id="visualization-plugins">Visualization Plugins <a href="#visualization-plugins" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p><strong>Description</strong>: Visualization plugins extend Omniview&rsquo;s capabilities to include custom data visualizations, charts, and dashboards.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>Grafana Dashboard Plugin</strong>: Embeds Grafana dashboards within Omniview.</li>
+<li><strong>D3 Visualization Plugin</strong>: Allows for custom data visualizations using D3.js.</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Creating custom dashboards for infrastructure and application metrics.</li>
+<li>Visualizing complex data relationships and trends.</li>
+</ul>
+<h2 id="analyzer-plugins">Analyzer Plugins <a href="#analyzer-plugins" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p><strong>Description</strong>: Analyzer plugins provide insights into resources, logs, metrics, and events, offering analysis, recommendations, and security assessments.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>Security Scanner Plugin</strong>: Integrates security scanning tools like Trivy or Clair for vulnerability analysis.</li>
+<li><strong>Cost Analyzer Plugin</strong>: Analyzes cloud resource usage and suggests cost-optimization strategies.</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Conducting security audits and compliance checks.</li>
+<li>Optimizing resource utilization and reducing costs.</li>
+</ul>
+<h2 id="manager-plugins">Manager Plugins <a href="#manager-plugins" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p><strong>Description</strong>: Manager plugins are responsible for managing the state and lifecycle of resources, including provisioning, updating, and teardown.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>Terraform Cloud Manager Plugin</strong>: Manages Terraform Cloud workspaces and runs.</li>
+<li><strong>Ansible Playbook Manager Plugin</strong>: Executes Ansible playbooks for configuration management.</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Automating infrastructure provisioning and configuration management.</li>
+<li>Managing the lifecycle of cloud resources and applications.</li>
+</ul>
+<p>Omniview&rsquo;s plugin ecosystem is designed to be open and extensible, encouraging the community and vendors to contribute plugins that enhance the DevOps experience. By leveraging these plugin types, Omniview users can tailor the IDE to fit their specific workflow needs, integrating seamlessly with the tools and services they rely on.</p>
+<hr>
+<p>This document serves as a foundational guide for understanding the capabilities and potential of Omniview&rsquo;s plugin system. As the ecosystem grows, we anticipate new types of plugins and use cases will emerge, further extending Omniview&rsquo;s versatility and utility for DevOps professionals.</p>
+
     </div>
 
+    
+
+    
                                         </div>
                                         <div><hr class="doc-hr">
 <div id="doc-nav" class="d-print-none">
+
+	<div class="row flex-xl-nowrap ">
+	<div class="col-sm-6 pt-2 doc-next">
+		<a href="/docs/core-concepts/">
+			<div class="card h-100 my-1">
+				<div class="card-body py-2">
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> Core Concepts</p>
+					
+				</div>
+			</div>
+		</a>
+        </div>
+	<div class="col-sm-6 pt-2 doc-prev">
+		<a class="ms-auto" href="/docs/key-features/">
+			<div class="card h-100 my-1 text-end">
+				<div class="card-body py-2">
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0">Key Features <i class="material-icons align-middle">navigate_next</i></p>
+					
+				</div>
+			</div>
+		</a>
+        </div>
+	</div>
 </div></div>
                                     </div>
                                 </div>

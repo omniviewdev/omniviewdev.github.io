@@ -14,7 +14,7 @@
 
 <html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
-    <title>Docs | Omniview - The Integration DevOps Environment</title>
+    <title>Core Concepts | Omniview - The Integration DevOps Environment</title>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Documentation, Hugo, Hugo Theme, Bootstrap" />
@@ -29,13 +29,17 @@
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="manifest" crossorigin="use-credentials" href="http://localhost:1313/site.webmanifest">
-<meta property="og:title" content="Docs" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/docs/" /><meta property="og:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_7086032896542432554.png"/><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_7086032896542432554.png"/>
-<meta name="twitter:title" content="Docs"/>
-<meta name="twitter:description" content=""/>
+<meta property="og:title" content="Core Concepts" />
+<meta property="og:description" content="Core Concepts of Omniview linkOmniview is built on a set of core concepts that guide its design, functionality, and user experience. Understanding these principles is key to leveraging Omniview to its full potential, allowing DevOps engineers to manage and visualize their infrastructure efficiently and effectively.
+Modular Architecture linkOmniview&rsquo;s architecture is modular, designed to be both extensible and scalable. It separates concerns between the frontend and backend, enabling a responsive user interface and robust backend services that can handle complex operations and integrations." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/docs/core-concepts/" /><meta property="og:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_10689491136417745879.png"/><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2024-03-09T16:53:45-06:00" />
+<meta property="article:modified_time" content="2024-03-09T16:53:45-06:00" /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_10689491136417745879.png"/>
+<meta name="twitter:title" content="Core Concepts"/>
+<meta name="twitter:description" content="Core Concepts of Omniview linkOmniview is built on a set of core concepts that guide its design, functionality, and user experience. Understanding these principles is key to leveraging Omniview to its full potential, allowing DevOps engineers to manage and visualize their infrastructure efficiently and effectively.
+Modular Architecture linkOmniview&rsquo;s architecture is modular, designed to be both extensible and scalable. It separates concerns between the frontend and backend, enabling a responsive user interface and robust backend services that can handle complex operations and integrations."/>
 
     
     <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
@@ -89,7 +93,7 @@
                 
                     
                         
-                        <li class="">
+                        <li class="current">
                             <a class="sidebar-root-link" href="http://localhost:1313/docs/core-concepts/">
                                 
                                 Core Concepts
@@ -232,10 +236,18 @@
                                     <div class="d-md-flex justify-content-between align-items-center"><nav aria-label="breadcrumb" class="d-inline-block pb-2 mt-1 mt-sm-0">
     <ul id="breadcrumbs" class="breadcrumb bg-transparent mb-0" itemscope itemtype="https://schema.org/BreadcrumbList">
         
+            
+                <li class="breadcrumb-item text-capitalize active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/docs/">
+                        <i class="material-icons size-20 align-text-bottom" itemprop="name">Home</i>
+                    </a>
+                    <meta itemprop="position" content='1' />
+                </li>
+            
         
-            <li class="breadcrumb-item text-capitalize active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <i class="material-icons size-20 align-text-bottom" itemprop="name">Home</i>
-                <meta itemprop="position" content='1' />
+            <li class="breadcrumb-item text-capitalize active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">Core Concepts</span>
+                <meta itemprop="position" content='2' />
             </li>
         
     </ul>
@@ -243,137 +255,108 @@
                                 
                                 <div class="row flex-xl-nowrap">
                                     
-                                    <div class="docs-toc col-xl-3 visually-hidden visually-hidden  d-xl-block"><toc>
+                                    <div class="docs-toc col-xl-3    d-xl-block"><toc>
     <div class="fw-bold text-uppercase mb-2">On this page</div>
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#modular-architecture">Modular Architecture</a>
+      <ul>
+        <li><a href="#backend">Backend</a></li>
+        <li><a href="#frontend">Frontend</a></li>
+      </ul>
+    </li>
+    <li><a href="#plugin-system">Plugin System</a></li>
+    <li><a href="#cloud-native-integration">Cloud-Native Integration</a></li>
+    <li><a href="#infrastructure-as-code-iac">Infrastructure as Code (IaC)</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
     </toc></div>
                                     
                                     
-                                    <div class="docs-toc-mobile visually-hidden visually-hidden  d-print-none d-xl-none">
+                                    <div class="docs-toc-mobile    d-print-none d-xl-none">
                                         <button id="toc-dropdown-btn" class="btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-offset="0,0" aria-expanded="false">
                                             Table of Contents
                                         </button>
-<nav id="toc-mobile"></nav></div>
-                                    <div class="docs-content col-12  mt-0">
+<nav id="toc-mobile">
+  <ul class="dropdown-menu">
+    <li><a href="#modular-architecture">Modular Architecture</a>
+      <ul>
+        <li><a href="#backend">Backend</a></li>
+        <li><a href="#frontend">Frontend</a></li>
+      </ul>
+    </li>
+    <li><a href="#plugin-system">Plugin System</a></li>
+    <li><a href="#cloud-native-integration">Cloud-Native Integration</a></li>
+    <li><a href="#infrastructure-as-code-iac">Infrastructure as Code (IaC)</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav></div>
+                                    <div class="docs-content col-12 col-xl-9 mt-0">
                                         <div class="mb-0 d-flex">
                                             
                                             <h1 class="content-title mb-0">
-                                                Docs
+                                                Core Concepts
                                                 
                                             </h1>
                                         </div>
                                         
                                         <div id="content" class="main-content" >
                                             
-    <div class="row flex-xl-wrap">
-        
-        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
-            <a class="text-decoration-none text-reset" href="http://localhost:1313/docs/introduction/">
-                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
-                    <span class="icon-color d-flex my-3">
-                        <i class="material-icons align-middle">article</i>
-                        
-                        
-                    </span>
-                    <div class="card-body p-0 content">
-                        <p class="fs-5 fw-semibold card-title mb-1">Introduction</p>
-                        <p class="para card-text mb-0"></p>
-                    </div>
-                    
-                </div>
-            </a>
-        </div>
-        
-        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
-            <a class="text-decoration-none text-reset" href="http://localhost:1313/docs/getting-started/">
-                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
-                    <span class="icon-color d-flex my-3">
-                        <i class="material-icons align-middle">article</i>
-                        
-                        
-                    </span>
-                    <div class="card-body p-0 content">
-                        <p class="fs-5 fw-semibold card-title mb-1">Getting Started</p>
-                        <p class="para card-text mb-0"></p>
-                    </div>
-                    
-                </div>
-            </a>
-        </div>
-        
-        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
-            <a class="text-decoration-none text-reset" href="http://localhost:1313/docs/core-concepts/">
-                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
-                    <span class="icon-color d-flex my-3">
-                        <i class="material-icons align-middle">article</i>
-                        
-                        
-                    </span>
-                    <div class="card-body p-0 content">
-                        <p class="fs-5 fw-semibold card-title mb-1">Core Concepts</p>
-                        <p class="para card-text mb-0"></p>
-                    </div>
-                    
-                </div>
-            </a>
-        </div>
-        
-        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
-            <a class="text-decoration-none text-reset" href="http://localhost:1313/docs/plugins/">
-                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
-                    <span class="icon-color d-flex my-3">
-                        <i class="material-icons align-middle">article</i>
-                        
-                        
-                    </span>
-                    <div class="card-body p-0 content">
-                        <p class="fs-5 fw-semibold card-title mb-1">Plugins</p>
-                        <p class="para card-text mb-0"></p>
-                    </div>
-                    
-                </div>
-            </a>
-        </div>
-        
-        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
-            <a class="text-decoration-none text-reset" href="http://localhost:1313/docs/key-features/">
-                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
-                    <span class="icon-color d-flex my-3">
-                        <i class="material-icons align-middle">article</i>
-                        
-                        
-                    </span>
-                    <div class="card-body p-0 content">
-                        <p class="fs-5 fw-semibold card-title mb-1">Key Features</p>
-                        <p class="para card-text mb-0"></p>
-                    </div>
-                    
-                </div>
-            </a>
-        </div>
-        
-        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
-            <a class="text-decoration-none text-reset" href="http://localhost:1313/docs/philosphy/">
-                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
-                    <span class="icon-color d-flex my-3">
-                        <i class="material-icons align-middle">article</i>
-                        
-                        
-                    </span>
-                    <div class="card-body p-0 content">
-                        <p class="fs-5 fw-semibold card-title mb-1">Philosphy</p>
-                        <p class="para card-text mb-0"></p>
-                    </div>
-                    
-                </div>
-            </a>
-        </div>
-        
+    
+    <div data-prismjs-copy="" data-prismjs-copy-success="" data-prismjs-copy-error="">
+        <h1 id="core-concepts-of-omniview">Core Concepts of Omniview <a href="#core-concepts-of-omniview" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h1><p>Omniview is built on a set of core concepts that guide its design, functionality, and user experience. Understanding these principles is key to leveraging Omniview to its full potential, allowing DevOps engineers to manage and visualize their infrastructure efficiently and effectively.</p>
+<h2 id="modular-architecture">Modular Architecture <a href="#modular-architecture" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Omniview&rsquo;s architecture is modular, designed to be both extensible and scalable. It separates concerns between the frontend and backend, enabling a responsive user interface and robust backend services that can handle complex operations and integrations.</p>
+<h3 id="backend">Backend <a href="#backend" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><ul>
+<li><strong>Go</strong>: The backend is built in Go for performance and efficiency, handling tasks such as data processing, plugin management, and external communications.</li>
+<li><strong>GraphQL</strong>: A GraphQL layer provides a flexible and efficient API for the frontend to query and manipulate data.</li>
+</ul>
+<h3 id="frontend">Frontend <a href="#frontend" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><ul>
+<li><strong>React</strong>: The frontend is developed with React, offering a dynamic and modern user interface.</li>
+<li><strong>Material-UI</strong>: This framework provides a cohesive look and feel, with reusable components that ensure a consistent user experience.</li>
+</ul>
+<h2 id="plugin-system">Plugin System <a href="#plugin-system" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>The plugin system is at the heart of Omniview&rsquo;s extensibility. It allows third-party developers and users to extend Omniview&rsquo;s capabilities by adding new features, integrating with external tools, and customizing the environment to fit their workflow.</p>
+<h2 id="cloud-native-integration">Cloud-Native Integration <a href="#cloud-native-integration" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Omniview embraces a cloud-native approach, with first-class support for Kubernetes and major cloud providers. This ensures seamless management of cloud resources, Kubernetes clusters, and applications, all within a unified interface.</p>
+<ul>
+<li><strong>Kubernetes Integration</strong>: Deep integration with Kubernetes allows for managing deployments, services, and monitoring within Omniview.</li>
+<li><strong>Cloud Providers</strong>: Direct connections to AWS, Azure, Google Cloud, and other cloud services enable comprehensive management of cloud resources.</li>
+</ul>
+<h2 id="infrastructure-as-code-iac">Infrastructure as Code (IaC) <a href="#infrastructure-as-code-iac" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Omniview supports Infrastructure as Code (IaC), allowing users to define and manage infrastructure using configuration files. This aligns with modern DevOps practices, facilitating version control, repeatability, and automation.</p>
+<h2 id="conclusion">Conclusion <a href="#conclusion" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>The core concepts of Omniview—its modular architecture, plugin system, cloud-native integration, and support for IaC—form the foundation of a powerful IDE tailored for the needs of DevOps engineers. By understanding these principles, users can fully utilize Omniview to streamline their infrastructure management and operations.</p>
+<hr>
+<p>Next, we will explore how to set up your first project in Omniview and begin managing your infrastructure.</p>
+
     </div>
 
+    
+
+    
                                         </div>
                                         <div><hr class="doc-hr">
 <div id="doc-nav" class="d-print-none">
+
+	<div class="row flex-xl-nowrap ">
+	<div class="col-sm-6 pt-2 doc-next">
+		<a href="/docs/getting-started/">
+			<div class="card h-100 my-1">
+				<div class="card-body py-2">
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> Getting Started</p>
+					
+				</div>
+			</div>
+		</a>
+        </div>
+	<div class="col-sm-6 pt-2 doc-prev">
+		<a class="ms-auto" href="/docs/plugins/">
+			<div class="card h-100 my-1 text-end">
+				<div class="card-body py-2">
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0">Plugins <i class="material-icons align-middle">navigate_next</i></p>
+					
+				</div>
+			</div>
+		</a>
+        </div>
+	</div>
 </div></div>
                                     </div>
                                 </div>

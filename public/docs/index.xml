@@ -1,19 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Docs on My New Hugo Site</title>
+    <title>Docs on Omniview - The Integration DevOps Environment</title>
     <link>http://localhost:1313/docs/</link>
-    <description>Recent content in Docs on My New Hugo Site</description>
+    <description>Recent content in Docs on Omniview - The Integration DevOps Environment</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Mar 2024 16:52:02 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 09 Mar 2024 16:57:24 -0600</lastBuildDate>
     <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Example Page</title>
-      <link>http://localhost:1313/docs/example-page/</link>
-      <pubDate>Sat, 09 Mar 2024 16:52:02 -0600</pubDate>
-      <guid>http://localhost:1313/docs/example-page/</guid>
-      <description></description>
+      <title>Introduction</title>
+      <link>http://localhost:1313/docs/introduction/</link>
+      <pubDate>Sat, 09 Mar 2024 16:53:00 -0600</pubDate>
+      <guid>http://localhost:1313/docs/introduction/</guid>
+      <description>Welcome to Omniview linkOmniview is the pioneering Integrated Development Environment (IDE) designed from the ground up for DevOps engineers. By bridging the gap between development and operations, Omniview offers a unified platform to visualize, manage, and operate infrastructure across diverse clouds, environments, and hosting platforms. Drawing inspiration from industry standards like VSCode, Grafana, and Terraform, Omniview integrates the best aspects of these tools into a seamless, intuitive experience.&#xA;Why Omniview? linkIn the evolving landscape of software development and operations, DevOps professionals have long sought tools that not only simplify their workflows but also enhance their operational capabilities.</description>
+    </item>
+    <item>
+      <title>Getting Started</title>
+      <link>http://localhost:1313/docs/getting-started/</link>
+      <pubDate>Sat, 09 Mar 2024 16:53:34 -0600</pubDate>
+      <guid>http://localhost:1313/docs/getting-started/</guid>
+      <description>Installation and Getting Started with Omniview linkWelcome to Omniview, the IDE designed for DevOps engineers to manage and visualize infrastructure with ease. This guide will walk you through the installation process and help you set up Omniview, ensuring you&amp;rsquo;re ready to take full advantage of its powerful features.&#xA;Installation linkOmniview supports various operating systems, including Windows, macOS, and Linux. Follow the steps below to install Omniview on your system.&#xA;Windows link Download the latest Omniview installer for Windows from the official website.</description>
+    </item>
+    <item>
+      <title>Core Concepts</title>
+      <link>http://localhost:1313/docs/core-concepts/</link>
+      <pubDate>Sat, 09 Mar 2024 16:53:45 -0600</pubDate>
+      <guid>http://localhost:1313/docs/core-concepts/</guid>
+      <description>Core Concepts of Omniview linkOmniview is built on a set of core concepts that guide its design, functionality, and user experience. Understanding these principles is key to leveraging Omniview to its full potential, allowing DevOps engineers to manage and visualize their infrastructure efficiently and effectively.&#xA;Modular Architecture linkOmniview&amp;rsquo;s architecture is modular, designed to be both extensible and scalable. It separates concerns between the frontend and backend, enabling a responsive user interface and robust backend services that can handle complex operations and integrations.</description>
+    </item>
+    <item>
+      <title>Plugins</title>
+      <link>http://localhost:1313/docs/plugins/</link>
+      <pubDate>Sat, 09 Mar 2024 16:57:24 -0600</pubDate>
+      <guid>http://localhost:1313/docs/plugins/</guid>
+      <description>Omniview Plugin Types: Extending the DevOps IDE linkOmniview&amp;rsquo;s powerful and flexible plugin system is designed to cater to a wide range of DevOps needs, enabling users to extend the IDE&amp;rsquo;s core functionalities with custom plugins. These plugins allow for the integration of additional tools, services, and functionalities, making Omniview a highly customizable and versatile platform for DevOps engineers. Below, we detail the various plugin types supported by Omniview, along with examples and use cases for each.</description>
+    </item>
+    <item>
+      <title>Key Features</title>
+      <link>http://localhost:1313/docs/key-features/</link>
+      <pubDate>Sat, 09 Mar 2024 16:53:23 -0600</pubDate>
+      <guid>http://localhost:1313/docs/key-features/</guid>
+      <description>Key Features and Architecture of Omniview linkOmniview is designed to empower DevOps engineers with a comprehensive set of tools and functionalities, enabling effective visualization, management, and operation of infrastructure across various platforms and environments. This section outlines the key features and the underlying architecture that make Omniview a revolutionary IDE for DevOps.&#xA;Key Features linkUnified Interface linkOmniview offers a single, intuitive interface for managing all aspects of your infrastructure, from code to deployment, across different clouds and platforms.</description>
+    </item>
+    <item>
+      <title>Philosphy</title>
+      <link>http://localhost:1313/docs/philosphy/</link>
+      <pubDate>Sat, 09 Mar 2024 16:53:16 -0600</pubDate>
+      <guid>http://localhost:1313/docs/philosphy/</guid>
+      <description>Philosophy and Strategic Overview of Omniview linkExecutive Summary linkOmniview is poised to revolutionize the DevOps landscape by offering an integrated development environment (IDE) uniquely tailored for DevOps engineers. Drawing inspiration from industry stalwarts like VSCode for its extensibility, Grafana for its visualization capabilities, and Terraform for its infrastructure as code (IaC) management, Omniview amalgamates these aspects into a singular, cohesive platform. Our mission is to empower DevOps professionals with a tool that enhances their workflow efficiency, simplifies infrastructure management, and accelerates the deployment lifecycle, all within a familiar yet powerful interface.</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,36 @@
+hero:
+  enable: true
+  weight: 10
+  template: hero
+
+  badge:
+    text: v0.1.0
+    color: primary # primary, secondary, success, danger, warning, info, light, dark
+    pill: false # boolean
+    soft: true # boolean
+
+  title: ""
+  subtitle: The future-proof, highly extendable IDE for DevOps engineering, transforming how you visualize, manage, and interact with your infrastructure..
+
+  image:
+    path: "images" # path to image under configured assets directory. default 'images'
+    filename: "screenshot.png" # filename of your hero image (including file extension)
+    alt: "Omniview Screenshot" # Optional but recommende
+    boxShadow: false # default 'false' (excludes .svg images)
+    rounded: true # round the image corners? default 'false' (excludes .svg images)
+
+  ctaButton:
+    icon: rocket_launch
+    btnText: "Get Started"
+    url: "/docs/getting-started"
+  cta2Button:
+    icon:
+    btnText: "View on Github"
+    url: "https://github.com/omniviewdev/omniview"
+
+  info: "**Open Source** AGPLv3 Licensed."
+
+  titleLogo:
+    path: "images"
+    filename: "logo.png"
+    height: "150px"
