@@ -23,6 +23,7 @@ hero:
     icon: rocket_launch
     btnText: "Get Started"
     url: "/docs/getting-started"
+
   cta2Button:
     icon:
     btnText: "View on Github"

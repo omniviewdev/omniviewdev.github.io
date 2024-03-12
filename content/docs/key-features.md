@@ -1,15 +1,13 @@
 ---
-weight: 999
+weight: 3
 title: "Key Features"
-description: ""
+description: "Key features and architecture of Omniview. Learn about the powerful capabilities and the underlying architecture that make Omniview a revolutionary IDE for DevOps."
 icon: "article"
 date: "2024-03-09T16:53:23-06:00"
 lastmod: "2024-03-09T16:53:23-06:00"
 draft: false
 toc: true
 ---
-
-# Key Features and Architecture of Omniview
 
 Omniview is designed to empower DevOps engineers with a comprehensive set of tools and functionalities, enabling effective visualization, management, and operation of infrastructure across various platforms and environments. This section outlines the key features and the underlying architecture that make Omniview a revolutionary IDE for DevOps.
 

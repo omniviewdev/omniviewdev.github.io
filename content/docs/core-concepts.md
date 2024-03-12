@@ -1,15 +1,13 @@
 ---
-weight: 3
+weight: 4
 title: "Core Concepts"
 description: ""
-icon: "article"
+icon: "schema"
 date: "2024-03-09T16:53:45-06:00"
 lastmod: "2024-03-09T16:53:45-06:00"
 draft: false
 toc: true
 ---
-
-# Core Concepts of Omniview
 
 Omniview is built on a set of core concepts that guide its design, functionality, and user experience. Understanding these principles is key to leveraging Omniview to its full potential, allowing DevOps engineers to manage and visualize their infrastructure efficiently and effectively.
 

@@ -3,28 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/docs/introduction/</loc>
-    <lastmod>2024-03-09T16:53:00-06:00</lastmod>
+    <lastmod>2024-03-09T17:04:36-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/getting-started/</loc>
-    <lastmod>2024-03-09T16:53:34-06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/core-concepts/</loc>
-    <lastmod>2024-03-09T16:53:45-06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/plugins/</loc>
-    <lastmod>2024-03-09T16:57:24-06:00</lastmod>
+    <lastmod>2024-03-09T17:04:36-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/key-features/</loc>
-    <lastmod>2024-03-09T16:53:23-06:00</lastmod>
+    <lastmod>2024-03-09T17:04:36-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/core-concepts/</loc>
+    <lastmod>2024-03-09T17:04:36-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/overview/</loc>
+    <lastmod>2024-03-11T21:10:42-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/</loc>
+    <lastmod>2024-03-09T16:57:24-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/api/</loc>
+    <lastmod>2024-03-11T21:12:47-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/api/plugin-context/</loc>
+    <lastmod>2024-03-11T21:12:15-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/philosphy/</loc>
-    <lastmod>2024-03-09T16:53:16-06:00</lastmod>
+    <lastmod>2024-03-09T17:04:36-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/</loc>
-    <lastmod>2024-03-09T16:57:24-06:00</lastmod>
+    <lastmod>2024-03-11T21:12:47-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-03-09T16:57:24-06:00</lastmod>
+    <lastmod>2024-03-11T21:12:47-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>

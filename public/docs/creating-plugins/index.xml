@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Creating Plugins on Omniview - The Integration DevOps Environment</title>
+    <link>http://localhost:1313/docs/creating-plugins/</link>
+    <description>Recent content in Creating Plugins on Omniview - The Integration DevOps Environment</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Mar 2024 21:10:42 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/creating-plugins/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Overview</title>
+      <link>http://localhost:1313/docs/creating-plugins/overview/</link>
+      <pubDate>Mon, 11 Mar 2024 21:10:42 -0500</pubDate>
+      <guid>http://localhost:1313/docs/creating-plugins/overview/</guid>
+      <description>Omniview was built to provide a powerful and flexible platform for DevOps engineers to manage and visualize infrastructure. One of the key features that makes Omniview so versatile is its plugin system. This system allows users to extend the core functionality of Omniview by creating custom plugins that integrate additional tools, services, and functionalities. Whether you want to interact with cloud resources, visualize metrics, or automate workflows, Omniview&amp;rsquo;s plugin system can cater to a wide range of DevOps needs.</description>
+    </item>
+  </channel>
+</rss>

@@ -2,14 +2,12 @@
 weight: 2
 title: "Getting Started"
 description: ""
-icon: "article"
+icon: "rocket"
 date: "2024-03-09T16:53:34-06:00"
 lastmod: "2024-03-09T16:53:34-06:00"
 draft: false
 toc: true
 ---
-
-# Installation and Getting Started with Omniview
 
 Welcome to Omniview, the IDE designed for DevOps engineers to manage and visualize infrastructure with ease. This guide will walk you through the installation process and help you set up Omniview, ensuring you're ready to take full advantage of its powerful features.
 
@@ -17,20 +15,26 @@ Welcome to Omniview, the IDE designed for DevOps engineers to manage and visuali
 
 Omniview supports various operating systems, including Windows, macOS, and Linux. Follow the steps below to install Omniview on your system.
 
-### Windows
+{{< tabs tabTotal="3">}}
+{{% tab tabName="Windows" %}}
 
 1. Download the latest Omniview installer for Windows from the official website.
 2. Run the installer and follow the on-screen instructions to complete the installation.
 
-### macOS
+{{% /tab %}}
+{{% tab tabName="MacOS" %}}
 
 1. Download the latest Omniview installer for macOS from the official website.
 2. Open the downloaded `.dmg` file and drag the Omniview application to your Applications folder.
 
-### Linux
+{{% /tab %}}
+{{% tab tabName="Linux" %}}
 
 1. Download the latest Omniview package for Linux from the official website.
 2. Depending on your distribution, use the package manager to install the `.deb` or `.rpm` file. For example, on Debian-based systems, you can use `sudo dpkg -i infraview.deb`.
+
+{{% /tab %}}
+{{< /tabs >}}
 
 ## Getting Started
 

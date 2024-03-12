@@ -1,6 +1,8 @@
 baseURL = 'https://docs.omniview.dev/'
 languageCode = 'en-us'
 title = 'Omniview - The Integration DevOps Environment'
+enableEmoji = true
+enableGitInfo = true
 
 [module]
     [[module.imports]]
@@ -10,6 +12,22 @@ title = 'Omniview - The Integration DevOps Environment'
         path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
         disable = false
 
-[params.docs]
-  themeColor = "cyan"
-  darkMode = true
+[params]
+    [params.docs]
+        # gitinfo
+        repoURL         = "https://github.com/omniviewdev/omniview"  # Git repository URL for your site [support for GitHub, GitLab, and BitBucket]
+        repoBranch      = "main"
+        editPage        = true                                # enable 'Edit this page' feature - default false
+        lastMod         = true                                # enable 'Last modified' date on pages - default false
+        lastModRelative = true                                # format 'Last modified' time as relative - default true
+
+        darkMode = true
+
+        sidebarIcons    = true                                # enable sidebar icons? default false
+        breadcrumbs     = true                                # default is true
+        backToTop       = true                                # enable back-to-top button? default true
+
+        # ToC
+        toc             = true                                # enable table of contents? default is true
+        tocMobile       = true                                # enable table of contents in mobile view? default is true
+        scrollSpy       = true                                # enable scrollspy on ToC? default is true

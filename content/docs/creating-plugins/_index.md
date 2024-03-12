@@ -1,17 +1,16 @@
 ---
-weight: 6
-title: "Plugins"
-description: ""
-icon: "article"
+weight: 300
+title: "Creating Plugins"
+description: "Learn how to create custom plugins to extend the functionality of Omniview."
+icon: "extension"
 date: "2024-03-09T16:57:24-06:00"
 lastmod: "2024-03-09T16:57:24-06:00"
 draft: false
-toc: true
 ---
 
-# Omniview Plugin Types: Extending the DevOps IDE
+Omniview was built to provide a powerful and flexible platform for DevOps engineers to manage and visualize infrastructure. One of the key features that makes Omniview so versatile is its plugin system. This system allows users to extend the core functionality of Omniview by creating custom plugins that integrate additional tools, services, and functionalities. Whether you want to interact with cloud resources, visualize metrics, or automate workflows, Omniview's plugin system can cater to a wide range of DevOps needs.
 
-Omniview's powerful and flexible plugin system is designed to cater to a wide range of DevOps needs, enabling users to extend the IDE's core functionalities with custom plugins. These plugins allow for the integration of additional tools, services, and functionalities, making Omniview a highly customizable and versatile platform for DevOps engineers. Below, we detail the various plugin types supported by Omniview, along with examples and use cases for each.
+Plugins can have one (or many!) of the following capabilities:
 
 ## Resource Plugins
 
@@ -126,3 +125,4 @@ Omniview's plugin ecosystem is designed to be open and extensible, encouraging t
 ---
 
 This document serves as a foundational guide for understanding the capabilities and potential of Omniview's plugin system. As the ecosystem grows, we anticipate new types of plugins and use cases will emerge, further extending Omniview's versatility and utility for DevOps professionals.
+

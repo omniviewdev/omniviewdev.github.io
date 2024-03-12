@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8" />
+    <title>Resource Plugins | Omniview - The Integration DevOps Environment</title>
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resource plugins enable interaction with and management of various infrastructure resources.">
+    <meta name="keywords" content="Documentation, Hugo, Hugo Theme, Bootstrap" />
+    <meta name="author" content="Colin Wilson - Lotus Labs" />
+    <meta name="email" content="support@aigis.uk" />
+    <meta name="website" content="https://lotusdocs.dev" />
+    <meta name="Version" content="v0.1.0" />
+    
+    <link rel="icon" href="http://localhost:1313/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="http://localhost:1313/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="http://localhost:1313/site.webmanifest">
+<meta property="og:title" content="Resource Plugins" />
+<meta property="og:description" content="Resource plugins enable interaction with and management of various infrastructure resources." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/docs/creating-plugins/resource/" /><meta property="og:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_9157889850568042800.png"/><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_9157889850568042800.png"/>
+<meta name="twitter:title" content="Resource Plugins"/>
+<meta name="twitter:description" content="Resource plugins enable interaction with and management of various infrastructure resources."/>
+
+    
+    <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+    
+    
+            
+                <script type="text/javascript" src="http://localhost:1313/docs/js/flexsearch.bundle.js"></script>
+            
+        
+    
+    
+
+    <link rel="stylesheet" href="/docs/scss/style.css" crossorigin="anonymous">
+    
+    
+    </head><body>
+    <div class="content">
+        <div class="page-wrapper toggled">
+<nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-brand">
+        <a href='/' aria-label="HomePage" alt="HomePage">
+            
+                <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250"><path d="m143,39.5c-18,0-18,18-18,18,0,0,0-18-18-18H22c-2.76,0-5,2.24-5,5v143c0,2.76,2.24,5,5,5h76c7.2,0,8.64,11.52,8.93,16.13.07,1.05.95,1.87,2,1.87h32.14c1.06,0,1.94-.82,2-1.87.29-4.61,1.73-16.13,8.93-16.13h76c2.76,0,5-2.24,5-5V44.5c0-2.76-2.24-5-5-5h-85Zm63,123.5c0,1.38-1.12,2.5-2.5,2.5h-60.5c-18,0-18,18-18,18,0,0,0-18-18-18h-60.5c-1.38,0-2.5-1.12-2.5-2.5v-94c0-1.38,1.12-2.5,2.5-2.5h51.5c7.2,0,8.64,11.52,8.93,16.13.07,1.05.95,1.87,2,1.87h32.14c1.06,0,1.94-.82,2-1.87.29-4.61,1.73-16.13,8.93-16.13h51.5c1.38,0,2.5,1.12,2.5,2.5v94Z" style="fill:#06f;"/></svg>
+            
+        </a>
+    </div>
+    <div class="sidebar-content" style="height: calc(100% - 131px);">
+        <ul class="sidebar-menu">
+            
+                
+                
+                    
+                        
+                        <li class="">
+                            <a class="sidebar-root-link" href="http://localhost:1313/docs/introduction/">
+                                <i class="material-icons me-2">article</i>
+                                
+                                Introduction
+                            </a>
+                        </li>
+                    
+                
+                    
+                        
+                        <li class="">
+                            <a class="sidebar-root-link" href="http://localhost:1313/docs/getting-started/">
+                                <i class="material-icons me-2">rocket</i>
+                                
+                                Getting Started
+                            </a>
+                        </li>
+                    
+                
+                    
+                        
+                        <li class="">
+                            <a class="sidebar-root-link" href="http://localhost:1313/docs/key-features/">
+                                <i class="material-icons me-2">article</i>
+                                
+                                Key Features
+                            </a>
+                        </li>
+                    
+                
+                    
+                        
+                        <li class="">
+                            <a class="sidebar-root-link" href="http://localhost:1313/docs/core-concepts/">
+                                <i class="material-icons me-2">schema</i>
+                                
+                                Core Concepts
+                            </a>
+                        </li>
+                    
+                
+                    
+                    
+                        <li class="sidebar-dropdown  current active">
+                            <button class="btn">
+                                <i class="material-icons me-2">extension</i>
+                                Creating Plugins
+                            </button>
+                            <div class="sidebar-submenu d-block">
+                                <ul>
+                                    
+                                        
+                                        
+                                            <li class=" "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/overview/">Overview</a></li>
+                                        
+                                    
+                                        
+                                        
+                                            <li class="sidebar-dropdown nested  ">
+                                                <button class="btn">
+                                                    
+                                                    API
+                                                </button>
+                                                <div class="sidebar-submenu ">
+                                                    <ul>
+                                                        
+                                                            
+                                                            
+                                                                <li class=" "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/api/plugin-context/">🔍 PluginContext</a></li>
+                                                            
+                                                        
+                                                            
+                                                            
+                                                                <li class=" "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/api/global-configuration/">🌎 Global Configuration</a></li>
+                                                            
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        
+                                    
+                                        
+                                        
+                                            <li class="sidebar-dropdown nested  current active">
+                                                <button class="btn">
+                                                    
+                                                    Resource Plugins
+                                                </button>
+                                                <div class="sidebar-submenu d-block">
+                                                    <ul>
+                                                        
+                                                            
+                                                            
+                                                                <li class=" "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/resource/overview/">Overview</a></li>
+                                                            
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        
+                                    
+                                        
+                                        
+                                            <li class="sidebar-dropdown nested  ">
+                                                <button class="btn">
+                                                    
+                                                    Exec Plugins
+                                                </button>
+                                                <div class="sidebar-submenu ">
+                                                    <ul>
+                                                        
+                                                            
+                                                            
+                                                                <li class=" "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/exec/overview/">Overview</a></li>
+                                                            
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        
+                                    
+                                        
+                                        
+                                            <li class="sidebar-dropdown nested  ">
+                                                <button class="btn">
+                                                    
+                                                    Log Plugins
+                                                </button>
+                                                <div class="sidebar-submenu ">
+                                                    <ul>
+                                                        
+                                                            
+                                                            
+                                                                <li class=" "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/log/overview/">Overview</a></li>
+                                                            
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        
+                                    
+                                        
+                                        
+                                            <li class="sidebar-dropdown nested  ">
+                                                <button class="btn">
+                                                    
+                                                    Metrics Plugins
+                                                </button>
+                                                <div class="sidebar-submenu ">
+                                                    <ul>
+                                                        
+                                                            
+                                                            
+                                                                <li class=" "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/metrics/overview/">Overview</a></li>
+                                                            
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        
+                                    
+                                        
+                                        
+                                            <li class="sidebar-dropdown nested  ">
+                                                <button class="btn">
+                                                    
+                                                    Event Plugins
+                                                </button>
+                                                <div class="sidebar-submenu ">
+                                                    <ul>
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        
+                        <li class="">
+                            <a class="sidebar-root-link" href="http://localhost:1313/docs/philosphy/">
+                                <i class="material-icons me-2">lightbulb</i>
+                                
+                                Philosphy
+                            </a>
+                        </li>
+                    
+                
+            
+        </ul>
+        
+    </div>
+    
+        <ul class="sidebar-footer list-unstyled mb-0">
+            
+        </ul>
+    
+</nav>
+
+                <main class="page-content bg-transparent">
+<div id="top-header" class="top-header d-print-none">
+    <div class="header-bar d-flex justify-content-between">
+        <div class="d-flex align-items-center">
+            <a href='/' class="logo-icon me-3" aria-label="HomePage" alt="HomePage">
+                <div class="small">
+                    
+                            <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250"><path d="m143,39.5c-18,0-18,18-18,18,0,0,0-18-18-18H22c-2.76,0-5,2.24-5,5v143c0,2.76,2.24,5,5,5h76c7.2,0,8.64,11.52,8.93,16.13.07,1.05.95,1.87,2,1.87h32.14c1.06,0,1.94-.82,2-1.87.29-4.61,1.73-16.13,8.93-16.13h76c2.76,0,5-2.24,5-5V44.5c0-2.76-2.24-5-5-5h-85Zm63,123.5c0,1.38-1.12,2.5-2.5,2.5h-60.5c-18,0-18,18-18,18,0,0,0-18-18-18h-60.5c-1.38,0-2.5-1.12-2.5-2.5v-94c0-1.38,1.12-2.5,2.5-2.5h51.5c7.2,0,8.64,11.52,8.93,16.13.07,1.05.95,1.87,2,1.87h32.14c1.06,0,1.94-.82,2-1.87.29-4.61,1.73-16.13,8.93-16.13h51.5c1.38,0,2.5,1.12,2.5,2.5v94Z" style="fill:#06f;"/></svg>
+                    
+                </div>
+                <div class="big">
+                    
+                            <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250"><path d="m143,39.5c-18,0-18,18-18,18,0,0,0-18-18-18H22c-2.76,0-5,2.24-5,5v143c0,2.76,2.24,5,5,5h76c7.2,0,8.64,11.52,8.93,16.13.07,1.05.95,1.87,2,1.87h32.14c1.06,0,1.94-.82,2-1.87.29-4.61,1.73-16.13,8.93-16.13h76c2.76,0,5-2.24,5-5V44.5c0-2.76-2.24-5-5-5h-85Zm63,123.5c0,1.38-1.12,2.5-2.5,2.5h-60.5c-18,0-18,18-18,18,0,0,0-18-18-18h-60.5c-1.38,0-2.5-1.12-2.5-2.5v-94c0-1.38,1.12-2.5,2.5-2.5h51.5c7.2,0,8.64,11.52,8.93,16.13.07,1.05.95,1.87,2,1.87h32.14c1.06,0,1.94-.82,2-1.87.29-4.61,1.73-16.13,8.93-16.13h51.5c1.38,0,2.5,1.12,2.5,2.5v94Z" style="fill:#06f;"/></svg>
+                    
+                </div>
+            </a>
+            <button id="close-sidebar" class="btn btn-icon btn-soft">
+                <span class="material-icons size-20 menu-icon align-middle">menu</span>
+            </button>
+            
+            
+                    
+                    <button id="flexsearch-button" class="ms-3 btn btn-soft" data-bs-toggle="collapse" data-bs-target="#FlexSearchCollapse" aria-expanded="false" aria-controls="FlexSearchCollapse">
+                        <span class="material-icons size-20 menu-icon align-middle">search</span>
+                        <span class="flexsearch-button-placeholder ms-1 me-2 d-none d-sm-block">Search</span>
+                        <div class="d-none d-sm-block">
+                            <span class="flexsearch-button-keys">
+                                <kbd class="flexsearch-button-cmd-key">
+                                    <svg width="44" height="15"><path d="M2.118,11.5A1.519,1.519,0,0,1,1,11.042,1.583,1.583,0,0,1,1,8.815a1.519,1.519,0,0,1,1.113-.458h.715V6.643H2.118A1.519,1.519,0,0,1,1,6.185,1.519,1.519,0,0,1,.547,5.071,1.519,1.519,0,0,1,1,3.958,1.519,1.519,0,0,1,2.118,3.5a1.519,1.519,0,0,1,1.114.458A1.519,1.519,0,0,1,3.69,5.071v.715H5.4V5.071A1.564,1.564,0,0,1,6.976,3.5,1.564,1.564,0,0,1,8.547,5.071,1.564,1.564,0,0,1,6.976,6.643H6.261V8.357h.715a1.575,1.575,0,0,1,1.113,2.685,1.583,1.583,0,0,1-2.227,0A1.519,1.519,0,0,1,5.4,9.929V9.214H3.69v.715a1.519,1.519,0,0,1-.458,1.113A1.519,1.519,0,0,1,2.118,11.5Zm0-.857a.714.714,0,0,0,.715-.714V9.214H2.118a.715.715,0,1,0,0,1.429Zm4.858,0a.715.715,0,1,0,0-1.429H6.261v.715a.714.714,0,0,0,.715.714ZM3.69,8.357H5.4V6.643H3.69ZM2.118,5.786h.715V5.071a.714.714,0,0,0-.715-.714.715.715,0,0,0-.5,1.22A.686.686,0,0,0,2.118,5.786Zm4.143,0h.715a.715.715,0,0,0,.5-1.22.715.715,0,0,0-1.22.5Z" fill="currentColor"></path><path d="M12.4,11.475H11.344l3.879-7.95h1.056Z" fill="currentColor"></path><path d="M25.073,5.384l-.864.576a2.121,2.121,0,0,0-1.786-.923,2.207,2.207,0,0,0-2.266,2.326,2.206,2.206,0,0,0,2.266,2.325,2.1,2.1,0,0,0,1.782-.918l.84.617a3.108,3.108,0,0,1-2.622,1.293,3.217,3.217,0,0,1-3.349-3.317,3.217,3.217,0,0,1,3.349-3.317A3.046,3.046,0,0,1,25.073,5.384Z" fill="currentColor"></path><path d="M30.993,5.142h-2.07v5.419H27.891V5.142h-2.07V4.164h5.172Z" fill="currentColor"></path><path d="M34.67,4.164c1.471,0,2.266.658,2.266,1.851,0,1.087-.832,1.809-2.134,1.855l2.107,2.691h-1.28L33.591,7.87H33.07v2.691H32.038v-6.4Zm-1.6.969v1.8h1.572c.832,0,1.22-.3,1.22-.918s-.411-.882-1.22-.882Z" fill="currentColor"></path><path d="M42.883,10.561H38.31v-6.4h1.033V9.583h3.54Z" fill="currentColor"></path></svg>
+                                </kbd>
+                                <kbd class="flexsearch-button-key">
+                                    <svg width="15" height="15"><path d="M5.926,12.279H4.41L9.073,2.721H10.59Z" fill="currentColor"/></svg>
+                                </kbd>
+                            </span>
+                        </div>
+                    </button>
+                
+            </div>
+
+        <div class="d-flex align-items-center">
+            <ul class="list-unstyled mb-0">
+                
+            </ul>
+            <button id="mode" class="btn btn-icon btn-default ms-2" type="button" aria-label="Toggle user interface mode">
+                <span class="toggle-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 48 48" fill="currentColor"><path d="M24 42q-7.5 0-12.75-5.25T6 24q0-7.5 5.25-12.75T24 6q.4 0 .85.025.45.025 1.15.075-1.8 1.6-2.8 3.95-1 2.35-1 4.95 0 4.5 3.15 7.65Q28.5 25.8 33 25.8q2.6 0 4.95-.925T41.9 22.3q.05.6.075.975Q42 23.65 42 24q0 7.5-5.25 12.75T24 42Zm0-3q5.45 0 9.5-3.375t5.05-7.925q-1.25.55-2.675.825Q34.45 28.8 33 28.8q-5.75 0-9.775-4.025T19.2 15q0-1.2.25-2.575.25-1.375.9-3.125-4.9 1.35-8.125 5.475Q9 18.9 9 24q0 6.25 4.375 10.625T24 39Zm-.2-14.85Z"/></svg>
+                </span>
+                <span class="toggle-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 48 48" fill="currentColor"><path d="M24 31q2.9 0 4.95-2.05Q31 26.9 31 24q0-2.9-2.05-4.95Q26.9 17 24 17q-2.9 0-4.95 2.05Q17 21.1 17 24q0 2.9 2.05 4.95Q21.1 31 24 31Zm0 3q-4.15 0-7.075-2.925T14 24q0-4.15 2.925-7.075T24 14q4.15 0 7.075 2.925T34 24q0 4.15-2.925 7.075T24 34ZM3.5 25.5q-.65 0-1.075-.425Q2 24.65 2 24q0-.65.425-1.075Q2.85 22.5 3.5 22.5h5q.65 0 1.075.425Q10 23.35 10 24q0 .65-.425 1.075-.425.425-1.075.425Zm36 0q-.65 0-1.075-.425Q38 24.65 38 24q0-.65.425-1.075.425-.425 1.075-.425h5q.65 0 1.075.425Q46 23.35 46 24q0 .65-.425 1.075-.425.425-1.075.425ZM24 10q-.65 0-1.075-.425Q22.5 9.15 22.5 8.5v-5q0-.65.425-1.075Q23.35 2 24 2q.65 0 1.075.425.425.425.425 1.075v5q0 .65-.425 1.075Q24.65 10 24 10Zm0 36q-.65 0-1.075-.425-.425-.425-.425-1.075v-5q0-.65.425-1.075Q23.35 38 24 38q.65 0 1.075.425.425.425.425 1.075v5q0 .65-.425 1.075Q24.65 46 24 46ZM12 14.1l-2.85-2.8q-.45-.45-.425-1.075.025-.625.425-1.075.45-.45 1.075-.45t1.075.45L14.1 12q.4.45.4 1.05 0 .6-.4 1-.4.45-1.025.45-.625 0-1.075-.4Zm24.7 24.75L33.9 36q-.4-.45-.4-1.075t.45-1.025q.4-.45 1-.45t1.05.45l2.85 2.8q.45.45.425 1.075-.025.625-.425 1.075-.45.45-1.075.45t-1.075-.45ZM33.9 14.1q-.45-.45-.45-1.05 0-.6.45-1.05l2.8-2.85q.45-.45 1.075-.425.625.025 1.075.425.45.45.45 1.075t-.45 1.075L36 14.1q-.4.4-1.025.4-.625 0-1.075-.4ZM9.15 38.85q-.45-.45-.45-1.075t.45-1.075L12 33.9q.45-.45 1.05-.45.6 0 1.05.45.45.45.45 1.05 0 .6-.45 1.05l-2.8 2.85q-.45.45-1.075.425-.625-.025-1.075-.425ZM24 24Z"/></svg>
+                </span>
+            </button>
+            
+        </div>
+    </div>
+    
+    
+            <div class="collapse" id="FlexSearchCollapse">
+                <div class="flexsearch-container">
+                    <div class="flexsearch-keymap">
+                        <li>
+                            <kbd class="flexsearch-button-cmd-key"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd>
+                            <kbd class="flexsearch-button-cmd-key"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd>
+                            <span class="flexsearch-key-label">to navigate</span>
+                        </li>
+                        <li>
+                            <kbd class="flexsearch-button-cmd-key"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd>
+                            <span class="flexsearch-key-label">to select</span>
+                        </li>
+                        <li>
+                            <kbd class="flexsearch-button-cmd-key"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd>
+                            <span class="flexsearch-key-label">to close</span>
+                        </li>
+                    </div>
+                    <form class="flexsearch position-relative flex-grow-1 ms-2 me-2">
+                        <div class="d-flex flex-row">
+                            <input id="flexsearch" class="form-control" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
+                            <button id="hideFlexsearch" type="button" class="ms-2 btn btn-soft">
+                                cancel
+                            </button>
+                        </div>
+                        <div id="suggestions" class="shadow rounded-1 d-none"></div>
+                    </form>
+                </div>
+            </div>
+        
+    
+    
+</div>
+<div class="container-fluid">
+                            <div class="layout-spacing">
+                                
+                                    <div class="d-md-flex justify-content-between align-items-center"><nav aria-label="breadcrumb" class="d-inline-block pb-2 mt-1 mt-sm-0">
+    <ul id="breadcrumbs" class="breadcrumb bg-transparent mb-0" itemscope itemtype="https://schema.org/BreadcrumbList">
+        
+            
+                <li class="breadcrumb-item text-capitalize active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/docs/">
+                        <i class="material-icons size-20 align-text-bottom" itemprop="name">Home</i>
+                    </a>
+                    <meta itemprop="position" content='1' />
+                </li>
+            
+            
+                <li class="breadcrumb-item text-capitalize" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/docs/creating-plugins/">
+                        <span itemprop="name">Creating Plugins</span>
+                    </a>
+                    <meta itemprop="position" content='2' />
+                </li>
+            
+        
+            <li class="breadcrumb-item text-capitalize active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">Resource Plugins</span>
+                <meta itemprop="position" content='3' />
+            </li>
+        
+    </ul>
+</nav></div>
+                                
+                                <div class="row flex-xl-nowrap">
+                                    
+                                    <div class="docs-toc col-xl-3 visually-hidden visually-hidden  d-xl-block"><toc>
+    <div class="fw-bold text-uppercase mb-2">On this page</div>
+    <nav id="toc"></nav>
+    </toc></div>
+                                    
+                                    
+                                    <div class="docs-toc-mobile visually-hidden visually-hidden  d-print-none d-xl-none">
+                                        <button id="toc-dropdown-btn" class="btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-offset="0,0" aria-expanded="false">
+                                            Table of Contents
+                                        </button>
+<nav id="toc-mobile"></nav></div>
+                                    <div class="docs-content col-12  mt-0">
+                                        <div class="mb-0 d-flex">
+                                            
+                                            <h1 class="content-title mb-0">
+                                                Resource Plugins
+                                                
+                                            </h1>
+                                        </div>
+                                        
+                                        <div id="content" class="main-content" data-bs-spy="scroll" data-bs-root-margin="0px 0px -65%" data-bs-target="#toc-mobile">
+                                            
+    <div class="row flex-xl-wrap">
+        
+        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
+            <a class="text-decoration-none text-reset" href="http://localhost:1313/docs/creating-plugins/resource/overview/">
+                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
+                    <span class="icon-color d-flex my-3">
+                        <i class="material-icons align-middle">extension</i>
+                        
+                        
+                    </span>
+                    <div class="card-body p-0 content">
+                        <p class="fs-5 fw-semibold card-title mb-1">Overview</p>
+                        <p class="para card-text mb-0">Resource plugins enable interaction with and management of various infrastructure resources.</p>
+                    </div>
+                    
+                </div>
+            </a>
+        </div>
+        
+    </div>
+
+                                        </div>
+                                        <div><hr class="doc-hr">
+<div id="doc-nav" class="d-print-none">
+</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<footer class="shadow py-3 d-print-none">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="text-sm-start text-center mx-md-2">
+                    <p class="mb-0">
+                        
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</main>
+        </div>
+    </div>
+
+    
+    
+    <button onclick="topFunction()" id="back-to-top" aria-label="Back to Top Button" class="back-to-top fs-5"><svg width="24" height="24"><path d="M12,10.224l-6.3,6.3L4.32,15.152,12,7.472l7.68,7.68L18.3,16.528Z" style="fill:#fff"/></svg></button>
+    
+    
+
+    
+    
+        <script>(()=>{var e=document.getElementById("mode");e!==null&&(window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",e=>{e.matches?(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")):(localStorage.setItem("theme","light"),document.documentElement.removeAttribute("data-dark-mode"))}),e.addEventListener("click",()=>{document.documentElement.toggleAttribute("data-dark-mode"),localStorage.setItem("theme",document.documentElement.hasAttribute("data-dark-mode")?"dark":"light")}),localStorage.getItem("theme")==="dark"?document.documentElement.setAttribute("data-dark-mode",""):document.documentElement.removeAttribute("data-dark-mode"))})()</script>
+    
+
+
+
+
+    
+        
+        
+    
+    
+
+
+
+
+
+
+    <script src="/docs/js/bootstrap.js" defer></script>
+
+
+    <script type="text/javascript" src="http://localhost:1313/docs/js/bundle.js" defer></script>
+    
+
+    
+    <script type="module">
+    var suggestions = document.getElementById('suggestions');
+    var search = document.getElementById('flexsearch');
+
+    const flexsearchContainer = document.getElementById('FlexSearchCollapse');
+
+    const hideFlexsearchBtn = document.getElementById('hideFlexsearch');
+
+    const configObject = { toggle: false }
+    const flexsearchContainerCollapse = new Collapse(flexsearchContainer, configObject) 
+
+    if (search !== null) {
+        document.addEventListener('keydown', inputFocus);
+        flexsearchContainer.addEventListener('shown.bs.collapse', function () {
+            search.focus();
+        });
+        
+        var topHeader = document.getElementById("top-header");
+        document.addEventListener('click', function(elem) {
+            if (!flexsearchContainer.contains(elem.target) && !topHeader.contains(elem.target))
+                flexsearchContainerCollapse.hide();
+        });
+    }
+
+    hideFlexsearchBtn.addEventListener('click', () =>{
+        flexsearchContainerCollapse.hide()
+    })
+
+    function inputFocus(e) {
+        if (e.ctrlKey && e.key === '/') {
+            e.preventDefault();
+            flexsearchContainerCollapse.toggle();
+        }
+        if (e.key === 'Escape' ) {
+            search.blur();
+            
+            flexsearchContainerCollapse.hide();
+        }
+    };
+
+    document.addEventListener('click', function(event) {
+
+    var isClickInsideElement = suggestions.contains(event.target);
+
+    if (!isClickInsideElement) {
+        suggestions.classList.add('d-none');
+    }
+
+    });
+
+    
+
+
+    document.addEventListener('keydown',suggestionFocus);
+
+    function suggestionFocus(e) {
+    const suggestionsHidden = suggestions.classList.contains('d-none');
+    if (suggestionsHidden) return;
+
+    const focusableSuggestions= [...suggestions.querySelectorAll('a')];
+    if (focusableSuggestions.length === 0) return;
+
+    const index = focusableSuggestions.indexOf(document.activeElement);
+
+    if (e.key === "ArrowUp") {
+        e.preventDefault();
+        const nextIndex = index > 0 ? index - 1 : 0;
+        focusableSuggestions[nextIndex].focus();
+    }
+    else if (e.key === "ArrowDown") {
+        e.preventDefault();
+        const nextIndex= index + 1 < focusableSuggestions.length ? index + 1 : index;
+        focusableSuggestions[nextIndex].focus();
+    }
+
+    }
+
+    
+
+
+    (function(){
+
+    var index = new FlexSearch.Document({
+        
+        tokenize: "forward",
+        minlength:  0 ,
+        cache:  100 ,
+        optimize:  true ,
+        document: {
+        id: 'id',
+        store: [
+            "href", "title", "description"
+        ],
+        index: ["title", "description", "content"]
+        }
+    });
+
+
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+
+    
+
+    index.add(
+            {
+                id:  0 ,
+                href: "\/docs\/introduction\/",
+                title: "Introduction",
+                description: "Welcome to Omniview linkOmniview is the pioneering Integrated Development Environment (IDE) designed from the ground up for DevOps engineers. By bridging the gap between development and operations, Omniview offers a unified platform to visualize, manage, and operate infrastructure across diverse clouds, environments, and hosting platforms. Drawing inspiration from industry standards like VSCode, Grafana, and Terraform, Omniview integrates the best aspects of these tools into a seamless, intuitive experience.\nWhy Omniview? linkIn the evolving landscape of software development and operations, DevOps professionals have long sought tools that not only simplify their workflows but also enhance their operational capabilities.",
+                content: "Welcome to Omniview linkOmniview is the pioneering Integrated Development Environment (IDE) designed from the ground up for DevOps engineers. By bridging the gap between development and operations, Omniview offers a unified platform to visualize, manage, and operate infrastructure across diverse clouds, environments, and hosting platforms. Drawing inspiration from industry standards like VSCode, Grafana, and Terraform, Omniview integrates the best aspects of these tools into a seamless, intuitive experience.\nWhy Omniview? linkIn the evolving landscape of software development and operations, DevOps professionals have long sought tools that not only simplify their workflows but also enhance their operational capabilities. Omniview meets this demand by providing:\nIntegrated Environment: Combining code editing, resource management, and operational tools in a single IDE. Powerful Extension System: Ensuring flexibility and customization through an extensive plugin ecosystem. Cross-Platform Support: Seamlessly manage and operate infrastructure across multiple cloud services and platforms. Community-Driven Development: With its core built on open-source principles, Omniview fosters innovation and collaboration. Enterprise-Ready: An enterprise version offers advanced features for larger businesses, following a model that balances community involvement with commercial support. Designed for DevOps linkOmniview is not just another IDE; it’s a specialized tool crafted to address the unique challenges faced by DevOps engineers. It enables effective management of infrastructure as code, real-time visualization of operational data, and a modular approach to extending functionality. Whether you’re deploying applications, monitoring cloud resources, or integrating with CI/CD pipelines, Omniview provides the tools and flexibility needed to excel in today’s fast-paced software delivery environment.\nGet Started linkDive into Omniview and discover how it revolutionizes DevOps workflows, making operations more efficient, collaborative, and intuitive. From installation to crafting your first plugin, our documentation covers everything you need to know to make the most out of Omniview.\nWelcome to the future of DevOps — Welcome to Omniview.\n"
+            }
+        );
+    index.add(
+            {
+                id:  1 ,
+                href: "\/docs\/getting-started\/",
+                title: "Getting Started",
+                description: "Welcome to Omniview, the IDE designed for DevOps engineers to manage and visualize infrastructure with ease. This guide will walk you through the installation process and help you set up Omniview, ensuring you’re ready to take full advantage of its powerful features.\nInstallation linkOmniview supports various operating systems, including Windows, macOS, and Linux. Follow the steps below to install Omniview on your system.\nWindows MacOS Linux Download the latest Omniview installer for Windows from the official website.",
+                content: "Welcome to Omniview, the IDE designed for DevOps engineers to manage and visualize infrastructure with ease. This guide will walk you through the installation process and help you set up Omniview, ensuring you’re ready to take full advantage of its powerful features.\nInstallation linkOmniview supports various operating systems, including Windows, macOS, and Linux. Follow the steps below to install Omniview on your system.\nWindows MacOS Linux Download the latest Omniview installer for Windows from the official website. Run the installer and follow the on-screen instructions to complete the installation. Download the latest Omniview installer for macOS from the official website. Open the downloaded .dmg file and drag the Omniview application to your Applications folder. Download the latest Omniview package for Linux from the official website. Depending on your distribution, use the package manager to install the .deb or .rpm file. For example, on Debian-based systems, you can use sudo dpkg -i infraview.deb. Getting Started linkOnce you have Omniview installed, it’s time to get it up and running. Here’s how to start your first session:\nLaunch Omniview: Open Omniview from your applications menu or desktop shortcut. Configure Your Workspace: The first time you open Omniview, you’ll be prompted to configure your workspace. This involves setting up connections to your cloud accounts, Kubernetes clusters, and any other infrastructure components you’ll be managing with Omniview. Explore the UI: Familiarize yourself with the Omniview interface. Check out the dashboard for an overview of your infrastructure, access the terminal for direct command-line operations, and explore the various plugins available for extended functionality. Create Your First Project: Start by creating a new project or importing an existing one. Omniview will guide you through setting up your project, including defining infrastructure as code (IaC) files, connecting to version control systems, and integrating with CI/CD pipelines. Monitor and Manage: With your project set up, you can now monitor your infrastructure’s health, manage resources, and deploy updates all from within Omniview. Next Steps link Explore Omniview’s Documentation: Dive deeper into the features and functionalities of Omniview by exploring the official documentation. Join the Community: Become part of the Omniview community to share insights, ask questions, and get support from fellow DevOps engineers. Congratulations on taking your first step towards simplifying your DevOps workflows with Omniview. We’re excited to have you on board and look forward to supporting you in your journey to streamline infrastructure management.\n"
+            }
+        );
+    index.add(
+            {
+                id:  2 ,
+                href: "\/docs\/key-features\/",
+                title: "Key Features",
+                description: "Key features and architecture of Omniview. Learn about the powerful capabilities and the underlying architecture that make Omniview a revolutionary IDE for DevOps.",
+                content: "Omniview is designed to empower DevOps engineers with a comprehensive set of tools and functionalities, enabling effective visualization, management, and operation of infrastructure across various platforms and environments. This section outlines the key features and the underlying architecture that make Omniview a revolutionary IDE for DevOps.\nKey Features linkUnified Interface linkOmniview offers a single, intuitive interface for managing all aspects of your infrastructure, from code to deployment, across different clouds and platforms.\nPowerful Plugin System linkWith an emphasis on extensibility, Omniview’s plugin system allows for seamless integration with a wide range of tools and services, including cloud providers, monitoring solutions, and configuration management tools.\nReal-time Visualization and Monitoring linkLeverage built-in tools for real-time visualization of your infrastructure’s state, performance metrics, and logs, making it easier to monitor and troubleshoot issues.\nInfrastructure as Code (IaC) Management linkManage and deploy your infrastructure using code, with support for popular IaC tools and a custom Terraform shim for enhanced compatibility and flexibility.\nExtensive Cloud Native and Kubernetes Support linkOmniview is designed with a cloud-native philosophy at its core, providing first-class support for Kubernetes alongside major cloud platforms like AWS, Azure, and Google Cloud. This ensures that DevOps engineers can manage and operate their infrastructure efficiently, whether it resides on traditional VMs, in managed Kubernetes services, or across hybrid environments.\nKubernetes Integration linkOmniview deeply integrates with Kubernetes, offering intuitive tools for deploying, managing, and visualizing Kubernetes resources. With features tailored for Kubernetes operations, users can:\nVisualize Kubernetes Clusters: Get a comprehensive view of your clusters, including nodes, pods, services, and more, all from within Omniview’s unified interface. Manage Kubernetes Workloads: Deploy and manage applications, configure scaling, and update resources directly through Omniview, leveraging its integrated Kubernetes tooling. Monitor Health and Performance: Access real-time metrics and logs for your Kubernetes resources, enabling effective monitoring and troubleshooting within the same environment you manage your infrastructure. Cloud Platform Support linkBeyond Kubernetes, Omniview’s extensive cloud platform support ensures that you can seamlessly manage resources across AWS, Azure, Google Cloud, and more. This broad compatibility allows DevOps teams to operate in multi-cloud environments without the need to switch between different tools or interfaces.\nBy bridging the gap between cloud services and Kubernetes, Omniview empowers DevOps engineers to adopt a truly cloud-native approach to infrastructure management, making it easier to leverage the full potential of modern cloud technologies and practices.\nArchitecture linkOmniview’s architecture is designed for scalability, performance, and flexibility. At its core, Omniview utilizes a modular structure where the backend, built in Go, provides the foundation for operation and integration capabilities. The frontend, powered by React and Material-UI, offers a responsive and user-friendly interface.\nBackend link Go: For high-performance backend services. GraphQL: Facilitates efficient and flexible data retrieval. Plugin API: Allows for the development and integration of a wide variety of plugins to extend functionality. Frontend link React: Ensures a dynamic and responsive user experience. Material-UI: Provides a consistent and modern UI design. Monaco Editor: Integrated for advanced code editing capabilities. Omniview’s architecture not only supports the current features but is also designed to accommodate future expansions, ensuring that the IDE can evolve with the changing landscape of DevOps and infrastructure management.\nConclusion linkOmniview brings together a powerful set of features and a robust architecture to offer a unique solution for DevOps engineers. By focusing on flexibility, extensibility, and user experience, Omniview stands out as an essential tool for modern infrastructure management.\nIn the next section, we will dive deeper into the installation process and how to get started with Omniview.\n"
+            }
+        );
+    index.add(
+            {
+                id:  3 ,
+                href: "\/docs\/core-concepts\/",
+                title: "Core Concepts",
+                description: "Omniview is built on a set of core concepts that guide its design, functionality, and user experience. Understanding these principles is key to leveraging Omniview to its full potential, allowing DevOps engineers to manage and visualize their infrastructure efficiently and effectively.\nModular Architecture linkOmniview’s architecture is modular, designed to be both extensible and scalable. It separates concerns between the frontend and backend, enabling a responsive user interface and robust backend services that can handle complex operations and integrations.",
+                content: "Omniview is built on a set of core concepts that guide its design, functionality, and user experience. Understanding these principles is key to leveraging Omniview to its full potential, allowing DevOps engineers to manage and visualize their infrastructure efficiently and effectively.\nModular Architecture linkOmniview’s architecture is modular, designed to be both extensible and scalable. It separates concerns between the frontend and backend, enabling a responsive user interface and robust backend services that can handle complex operations and integrations.\nBackend link Go: The backend is built in Go for performance and efficiency, handling tasks such as data processing, plugin management, and external communications. GraphQL: A GraphQL layer provides a flexible and efficient API for the frontend to query and manipulate data. Frontend link React: The frontend is developed with React, offering a dynamic and modern user interface. Material-UI: This framework provides a cohesive look and feel, with reusable components that ensure a consistent user experience. Plugin System linkThe plugin system is at the heart of Omniview’s extensibility. It allows third-party developers and users to extend Omniview’s capabilities by adding new features, integrating with external tools, and customizing the environment to fit their workflow.\nCloud-Native Integration linkOmniview embraces a cloud-native approach, with first-class support for Kubernetes and major cloud providers. This ensures seamless management of cloud resources, Kubernetes clusters, and applications, all within a unified interface.\nKubernetes Integration: Deep integration with Kubernetes allows for managing deployments, services, and monitoring within Omniview. Cloud Providers: Direct connections to AWS, Azure, Google Cloud, and other cloud services enable comprehensive management of cloud resources. Infrastructure as Code (IaC) linkOmniview supports Infrastructure as Code (IaC), allowing users to define and manage infrastructure using configuration files. This aligns with modern DevOps practices, facilitating version control, repeatability, and automation.\nConclusion linkThe core concepts of Omniview—its modular architecture, plugin system, cloud-native integration, and support for IaC—form the foundation of a powerful IDE tailored for the needs of DevOps engineers. By understanding these principles, users can fully utilize Omniview to streamline their infrastructure management and operations.\nNext, we will explore how to set up your first project in Omniview and begin managing your infrastructure.\n"
+            }
+        );
+    index.add(
+            {
+                id:  4 ,
+                href: "\/docs\/creating-plugins\/overview\/",
+                title: "Overview",
+                description: "An overview of the plugin system",
+                content: "Omniview was built to provide a powerful and flexible platform for DevOps engineers to manage and visualize infrastructure. One of the key features that makes Omniview so versatile is its plugin system. This system allows users to extend the core functionality of Omniview by creating custom plugins that integrate additional tools, services, and functionalities. Whether you want to interact with cloud resources, visualize metrics, or automate workflows, Omniview’s plugin system can cater to a wide range of DevOps needs.\nPlugins can have one (or many!) of the following capabilities:\nResource Plugins linkDescription: Resource plugins enable interaction with and management of various infrastructure resources. These plugins can list, create, update, delete, and watch resources, providing a seamless interface for infrastructure management within Omniview.\nExamples:\nAWS Plugin: Manages AWS resources such as EC2 instances, S3 buckets, and RDS databases. Google Cloud Plugin: Interacts with Google Cloud resources like Compute Engine VMs, Cloud Storage, and BigQuery datasets. Use Cases:\nProvisioning and managing cloud resources directly from Omniview. Automating resource lifecycle workflows such as scaling, backups, and updates. Log Plugins linkDescription: Log plugins focus on querying and displaying logs from various sources. They enable users to access and analyze log data from within Omniview, facilitating troubleshooting and monitoring.\nExamples:\nLoki Plugin: Integrates with Grafana Loki to fetch and display logs. CloudWatch Logs Plugin: Retrieves and displays logs from AWS CloudWatch. Use Cases:\nCentralized log management for easier debugging and monitoring. Real-time log tailing for active systems and applications. Metric Plugins linkDescription: Metric plugins provide capabilities for querying and visualizing metrics. These plugins are crucial for monitoring the performance and health of infrastructure and applications.\nExamples:\nPrometheus Plugin: Queries and displays metrics from Prometheus. Datadog Plugin: Integrates with Datadog to visualize metrics and alerts. Use Cases:\nDashboarding and real-time monitoring of system and application metrics. Performance analysis and capacity planning. Event Plugins linkDescription: Event plugins allow for the emission, listening, and handling of events within Omniview. These can be global events, resource-specific events, or interactions between resources.\nExamples:\nKubernetes Events Plugin: Displays events from Kubernetes clusters. Webhook Receiver Plugin: Listens for external webhooks and triggers actions within Omniview. Use Cases:\nMonitoring and alerting on specific events related to infrastructure changes. Automating workflows based on event triggers. Exec Plugins linkDescription: Exec plugins offer terminal access or command execution capabilities for resources. They are essential for performing direct operations on machines or containers.\nExamples:\nSSH Plugin: Provides SSH access to virtual machines. Kubectl Exec Plugin: Executes commands in Kubernetes pods using kubectl. Use Cases:\nRemote management and troubleshooting of servers and containers. Executing scripts or commands as part of deployment or maintenance tasks. Editor Plugins linkDescription: Editor plugins enhance the text editing capabilities of Omniview, allowing for specialized editing features tailored to specific languages or configurations.\nExamples:\nTerraform Editor Plugin: Adds syntax highlighting, formatting, and validation for Terraform files. YAML/JSON Editor Plugin: Enhances editing experiences for YAML and JSON files with auto-completion and error detection. Use Cases:\nImproving productivity and reducing errors in configuration file management. Customizing the editing experience for specific languages or file formats. Visualization Plugins linkDescription: Visualization plugins extend Omniview’s capabilities to include custom data visualizations, charts, and dashboards.\nExamples:\nGrafana Dashboard Plugin: Embeds Grafana dashboards within Omniview. D3 Visualization Plugin: Allows for custom data visualizations using D3.js. Use Cases:\nCreating custom dashboards for infrastructure and application metrics. Visualizing complex data relationships and trends. Analyzer Plugins linkDescription: Analyzer plugins provide insights into resources, logs, metrics, and events, offering analysis, recommendations, and security assessments.\nExamples:\nSecurity Scanner Plugin: Integrates security scanning tools like Trivy or Clair for vulnerability analysis. Cost Analyzer Plugin: Analyzes cloud resource usage and suggests cost-optimization strategies. Use Cases:\nConducting security audits and compliance checks. Optimizing resource utilization and reducing costs. Manager Plugins linkDescription: Manager plugins are responsible for managing the state and lifecycle of resources, including provisioning, updating, and teardown.\nExamples:\nTerraform Cloud Manager Plugin: Manages Terraform Cloud workspaces and runs. Ansible Playbook Manager Plugin: Executes Ansible playbooks for configuration management. Use Cases:\nAutomating infrastructure provisioning and configuration management. Managing the lifecycle of cloud resources and applications. Omniview’s plugin ecosystem is designed to be open and extensible, encouraging the community and vendors to contribute plugins that enhance the DevOps experience. By leveraging these plugin types, Omniview users can tailor the IDE to fit their specific workflow needs, integrating seamlessly with the tools and services they rely on.\nThis document serves as a foundational guide for understanding the capabilities and potential of Omniview’s plugin system. As the ecosystem grows, we anticipate new types of plugins and use cases will emerge, further extending Omniview’s versatility and utility for DevOps professionals.\n"
+            }
+        );
+    index.add(
+            {
+                id:  5 ,
+                href: "\/docs\/creating-plugins\/api\/",
+                title: "API",
+                description: "API reference for creating plugins.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  6 ,
+                href: "\/docs\/creating-plugins\/api\/plugin-context\/",
+                title: "🔍 PluginContext",
+                description: "Main content passed to plugins.",
+                content: "Structure linkEvery time a plugin is called by the IDE (or a by another plugin), a PluginContext is generated and passed throughout, providing access to the core functionality and data of Omniview. The context provides access to various aspects of the request, including the request options, authentication context, resource context, and plugin configuration.\nThe PluginContext struct is defined as follows:\ntype PluginContext struct { Context context.Context RequestID string RequesterID string RequestOptions *RequestOptions AuthContext *AuthContext ResourceContext *ResourceContext PluginConfig *PluginConfig GlobalConfig *GlobalConfig } Key Default Description Context N/A Standard context for the request, which can be used for cancellation and timeouts. RequestID Random UUID The unique identifier for the request. This can also be used as an idempotency token. RequesterID CORE The identifier of who made the request. This can either be the IDE core (labelled as CORE) or the ID of the plugin that made the request. RequestOptions N/A The options that control the behavior of the request. AuthContext N/A The authorization context for the request. ResourceContext N/A The context of the resource being operated on. PluginConfig N/A The configuration of the plugin. GlobalConfig N/A The global configuration of the IDE. 🌐 RequestOptions linkRequest options are used to control the behavior of the request. This includes the timeout, the number of retries, and the backoff interval.\ntype RequestOptions struct { Timeout time.Duration MaxRetries int BackoffInterval time.Duration } Key Default Description Timeout 10s Length of time that the plugin should wait for a response from the plugin. MaxRetries 3 The maximum number of times the plugin should retry the request in case of failure. BackoffInterval 1.1s The time to wait between retries. 🔑 AuthContext linkStores information about the authorization context for the request to the backend, as well settings the user has configured for the specific authorization context instance. This also includes a data store that the client factories can inject into for passing arbitrary scoped data down the call stack.\nExamples of auth contexts defined in the IDE include things such as:\nAn AWS profile A Kubernetes context A GCP service account warning All information other than sensitiveData will be exposed to the user. Do not store sensitive data outside the sensitiveData store type AuthContext struct { ID string UID string Name string Description string Labels map[string]string ExpiryTime time.Duration LastRefresh time.Time Data map[string]interface{} sensitiveData map[string]interface{} } Key Default Description ID N/A Identifier of the authorization context. UID Random UUID Unique identifier of the authorization context, used by the IDE to track the instance. This is generated by the IDE and is not user-configurable. Name Value of ID Human-readable name of the authorization context. This is configured by the user. Description N/A User description of the authorization context. Labels Empty Map Arbitrary key-value pairs that either the user or plugin can use to store additional metadata about the authorization context. ExpiryTime 24h The time at which the authorization context will expire. This is used to determine when the context should be refreshed, and should be set by the client factory. LastRefresh N/A The last time this authorization context was refreshed. IsAuthed linkCheck if the request is authenticated.\nfunc (c *AuthContext) IsAuthed() bool GetData linkGet non-sensitive data attached to the auth context by the client factory\nfunc (c *AuthContext) GetData() map[string]interface{} SetData linkSet non-sensitive data on the context. This will overwrite any existing data.\nfunc (c *AuthContext) SetData(data map[string]interface{}) GetDataKey linkGet an item from the data store by key\nfunc (c *AuthContext) GetDataKey(key string) (interface{}, bool) SetDataKey linkSet an item in the data store by key.\nfunc (c *AuthContext) SetDataKey(key string, value interface{}) GetSensitiveData linkGet sensitive data attached to the auth context by the client factory\nfunc (c *AuthContext) GetSensitiveData() map[string]interface{} SetSensitiveData linkSet sensitive data on the context. This will overwrite any existing data.\nfunc (c *AuthContext) SetSensitiveData(data map[string]interface{}) SetSensitiveDataKey linkSet an item in the sensitive data store by key.\nfunc (c *AuthContext) SetSensitiveDataKey(key string, value interface{}) GetSensitiveDataKey linkGet an item from the sensitive data store by key\nfunc (c *AuthContext) GetSensitiveDataKey(key string) (interface{}, bool) 📦 ResourceContext linkThe context of the resource being operated on. This is only available when the plugin is called from a resource context.\ninfo The Resource Plugin SDK is under heavy development, and this context is subject to frequent breaking changes until the first stable release type ResourceContext struct { ID string Metadata ResourceMetadata Data map[string]string } Key Default Description ID N/A Identifier of the resource. Metadata N/A Metadata about the resource. See the Resource Plugin documentation for more information. Labels Empty Map Arbitrary key-value store that either the user or plugin can use to store additional metadata about the resource. 🛠 PluginConfig linkConfiguration of the plugin itself by the user, as defined in the settings options in the plugin setup function.\nThe available keys here are defined when you setup the plugin. For example, if we were to initialize a plugin with the following PluginOpts:\npackage main import ( \"github.com/omniview/kubernetes/pkg/plugin/resource\" \"github.com/omniviewdev/plugin/pkg/resource/types\" \"github.com/omniviewdev/plugin/pkg/sdk\" sdksettings \"github.com/omniviewdev/plugin/pkg/settings\" ) func main() { plugin := sdk.NewPlugin(sdk.PluginOpts{ Settings: []interface{}{ sdksettings.Multitext{ ID: \"kubeconfigs\", Name: \"Kubeconfigs\", Description: \"A list of available Kubeconfigs to use\", Default: []string{\"~/.kube/config\"}, }, sdksettings.Text{ ID: \"shell\", Name: \"Shell\", Description: \"The default shell to use for running commands and authenticating with Kubernetes clusters.\", Default: \"/bin/zsh\", }, }, }) // ... // ... We can access the PluginConfig in the plugin context with the following keys:\nfunc SomeFunction(c *sdk.PluginContext) { kubeconfigs, _ := c.PluginConfig.Get[[]string](\"kubeconfigs\") shell, _ := c.PluginConfig.Get[string](\"shell\") } Get linkGet a global configuration value by key\nfunc (c *PluginContext) Get[K comparable](key string) (K, bool) Set linkSet a global configuration value by key\nfunc (c *PluginContext) Set(key string, value interface{}) 🌍 GlobalConfig linkConfiguration of the IDE itself by the user, as defined in the settings options in the IDE setup function. The most common settings found here can be accessed via the exported symbols:\nglobals.SHELL globals.EDITOR globals.THEME globals.LANGUAGE Detailed documentation on the global configuration settings can be found here.\nGet linkGet a global configuration value by key\nfunc (c *GlobalConfig) Get[K comparable](key string) (K, bool) Set linkSet a global configuration value by key\nfunc (c *GlobalConfig) Set(key string, value interface{}) "
+            }
+        );
+    index.add(
+            {
+                id:  7 ,
+                href: "\/docs\/creating-plugins\/api\/global-configuration\/",
+                title: "🌎 Global Configuration",
+                description: "Global configuration reference.",
+                content: "The following is a reference for the global configuration available to plugins within Omniview. Each section provides a description of the configuration options and their default values.\nThe global configuration can also be found on the Settings page by clicking the gear icon in the top right corner of the Omniview interface. The identifiers can be enabled in the UI under the Development section of the configuration area.\nwarning Omniview is under heavy active development - as such, the global configuration is subject to frequent breaking changes until the first stable release. Key Type Description "
+            }
+        );
+    index.add(
+            {
+                id:  8 ,
+                href: "\/docs\/creating-plugins\/resource\/",
+                title: "Resource Plugins",
+                description: "Resource plugins enable interaction with and management of various infrastructure resources.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  9 ,
+                href: "\/docs\/creating-plugins\/resource\/overview\/",
+                title: "Overview",
+                description: "Resource plugins enable interaction with and management of various infrastructure resources.",
+                content: "Resource plugins enable interaction with and management of various infrastructure resources. These plugins can list, create, update, delete, and watch resources, providing a seamless interface for infrastructure management within Omniview.\nwarning Omniview is under heavy active development - the ResourcePlugin SDK is subject to frequent breaking changes until the first stable release. "
+            }
+        );
+    index.add(
+            {
+                id:  10 ,
+                href: "\/docs\/creating-plugins\/",
+                title: "Creating Plugins",
+                description: "Learn how to create custom plugins to extend the functionality of Omniview.",
+                content: "Omniview was built to provide a powerful and flexible platform for DevOps engineers to manage and visualize infrastructure. One of the key features that makes Omniview so versatile is its plugin system. This system allows users to extend the core functionality of Omniview by creating custom plugins that integrate additional tools, services, and functionalities. Whether you want to interact with cloud resources, visualize metrics, or automate workflows, Omniview’s plugin system can cater to a wide range of DevOps needs.\nPlugins can have one (or many!) of the following capabilities:\nResource Plugins linkDescription: Resource plugins enable interaction with and management of various infrastructure resources. These plugins can list, create, update, delete, and watch resources, providing a seamless interface for infrastructure management within Omniview.\nExamples:\nAWS Plugin: Manages AWS resources such as EC2 instances, S3 buckets, and RDS databases. Google Cloud Plugin: Interacts with Google Cloud resources like Compute Engine VMs, Cloud Storage, and BigQuery datasets. Use Cases:\nProvisioning and managing cloud resources directly from Omniview. Automating resource lifecycle workflows such as scaling, backups, and updates. Log Plugins linkDescription: Log plugins focus on querying and displaying logs from various sources. They enable users to access and analyze log data from within Omniview, facilitating troubleshooting and monitoring.\nExamples:\nLoki Plugin: Integrates with Grafana Loki to fetch and display logs. CloudWatch Logs Plugin: Retrieves and displays logs from AWS CloudWatch. Use Cases:\nCentralized log management for easier debugging and monitoring. Real-time log tailing for active systems and applications. Metric Plugins linkDescription: Metric plugins provide capabilities for querying and visualizing metrics. These plugins are crucial for monitoring the performance and health of infrastructure and applications.\nExamples:\nPrometheus Plugin: Queries and displays metrics from Prometheus. Datadog Plugin: Integrates with Datadog to visualize metrics and alerts. Use Cases:\nDashboarding and real-time monitoring of system and application metrics. Performance analysis and capacity planning. Event Plugins linkDescription: Event plugins allow for the emission, listening, and handling of events within Omniview. These can be global events, resource-specific events, or interactions between resources.\nExamples:\nKubernetes Events Plugin: Displays events from Kubernetes clusters. Webhook Receiver Plugin: Listens for external webhooks and triggers actions within Omniview. Use Cases:\nMonitoring and alerting on specific events related to infrastructure changes. Automating workflows based on event triggers. Exec Plugins linkDescription: Exec plugins offer terminal access or command execution capabilities for resources. They are essential for performing direct operations on machines or containers.\nExamples:\nSSH Plugin: Provides SSH access to virtual machines. Kubectl Exec Plugin: Executes commands in Kubernetes pods using kubectl. Use Cases:\nRemote management and troubleshooting of servers and containers. Executing scripts or commands as part of deployment or maintenance tasks. Editor Plugins linkDescription: Editor plugins enhance the text editing capabilities of Omniview, allowing for specialized editing features tailored to specific languages or configurations.\nExamples:\nTerraform Editor Plugin: Adds syntax highlighting, formatting, and validation for Terraform files. YAML/JSON Editor Plugin: Enhances editing experiences for YAML and JSON files with auto-completion and error detection. Use Cases:\nImproving productivity and reducing errors in configuration file management. Customizing the editing experience for specific languages or file formats. Visualization Plugins linkDescription: Visualization plugins extend Omniview’s capabilities to include custom data visualizations, charts, and dashboards.\nExamples:\nGrafana Dashboard Plugin: Embeds Grafana dashboards within Omniview. D3 Visualization Plugin: Allows for custom data visualizations using D3.js. Use Cases:\nCreating custom dashboards for infrastructure and application metrics. Visualizing complex data relationships and trends. Analyzer Plugins linkDescription: Analyzer plugins provide insights into resources, logs, metrics, and events, offering analysis, recommendations, and security assessments.\nExamples:\nSecurity Scanner Plugin: Integrates security scanning tools like Trivy or Clair for vulnerability analysis. Cost Analyzer Plugin: Analyzes cloud resource usage and suggests cost-optimization strategies. Use Cases:\nConducting security audits and compliance checks. Optimizing resource utilization and reducing costs. Manager Plugins linkDescription: Manager plugins are responsible for managing the state and lifecycle of resources, including provisioning, updating, and teardown.\nExamples:\nTerraform Cloud Manager Plugin: Manages Terraform Cloud workspaces and runs. Ansible Playbook Manager Plugin: Executes Ansible playbooks for configuration management. Use Cases:\nAutomating infrastructure provisioning and configuration management. Managing the lifecycle of cloud resources and applications. Omniview’s plugin ecosystem is designed to be open and extensible, encouraging the community and vendors to contribute plugins that enhance the DevOps experience. By leveraging these plugin types, Omniview users can tailor the IDE to fit their specific workflow needs, integrating seamlessly with the tools and services they rely on.\nThis document serves as a foundational guide for understanding the capabilities and potential of Omniview’s plugin system. As the ecosystem grows, we anticipate new types of plugins and use cases will emerge, further extending Omniview’s versatility and utility for DevOps professionals.\n"
+            }
+        );
+    index.add(
+            {
+                id:  11 ,
+                href: "\/docs\/creating-plugins\/exec\/",
+                title: "Exec Plugins",
+                description: "Exec plugins provide capabilities for executing commands on remote systems.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  12 ,
+                href: "\/docs\/creating-plugins\/metrics\/overview\/",
+                title: "Overview",
+                description: "Metrics plugins provide capabilities providing metrics to reosurces.",
+                content: "Metric plugins provide capabilities for querying and visualizing metrics. These plugins are crucial for monitoring the performance and health of infrastructure and applications.\nwarning Omniview is under heavy active development - the MetricsPlugin SDK is subject to frequent breaking changes until the first stable release. "
+            }
+        );
+    index.add(
+            {
+                id:  13 ,
+                href: "\/docs\/creating-plugins\/log\/",
+                title: "Log Plugins",
+                description: "Log plugins provide capabilities for querying and visualizing logs.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  14 ,
+                href: "\/docs\/creating-plugins\/exec\/overview\/",
+                title: "Overview",
+                description: "Exec plugins provide capabilities for executing commands and providing shell access to resources.",
+                content: "Exec plugins provide capabilities for executing commands and providing shell access to resources. Exec plugins provide a means to authenticate to a machine that can be used to execute commands. This is useful for tasks such as running scripts, gathering information, or executing commands on remote systems.\nThe Omniview core provides three primary built-in exec plugins:\nLocal SSH Docker However, you can also create custom exec plugins to support other protocols or systems. For example:\nAWS Session Manager Azure Cloud Shell Kubernetes Exec The ExecPlugin SDK provides a set of interfaces and types that you can use to create custom exec plugins. In the following section, we’ll go through how to use the ExecPlugin SDK to recreate the SSH exec plugin.\ninfo Omniview is under heavy active development - the ExecPlugin SDK is subject to frequent breaking changes until the first stable release. "
+            }
+        );
+    index.add(
+            {
+                id:  15 ,
+                href: "\/docs\/creating-plugins\/log\/overview\/",
+                title: "Overview",
+                description: "Log plugins provide capabilities for querying and visualizing logs against resources, connecting to various log backends.",
+                content: "Log plugins provide capabilities for querying and visualizing logs against resources, connecting to various log backends to provide a unified view of logs across different systems.\nwarning Omniview is under heavy active development - the LogPlugin SDK is subject to frequent breaking changes until the first stable release. "
+            }
+        );
+    index.add(
+            {
+                id:  16 ,
+                href: "\/docs\/creating-plugins\/metrics\/",
+                title: "Metrics Plugins",
+                description: "Metrics plugins provide capabilities for querying and visualizing metrics.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  17 ,
+                href: "\/docs\/creating-plugins\/event\/",
+                title: "Event Plugins",
+                description: "Event plugins provide capabilities for querying and providing hook points for events within resource backends.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  18 ,
+                href: "\/docs\/philosphy\/",
+                title: "Philosphy",
+                description: "Executive Summary linkOmniview is poised to revolutionize the DevOps landscape by offering an integrated development environment (IDE) uniquely tailored for DevOps engineers. Drawing inspiration from industry stalwarts like VSCode for its extensibility, Grafana for its visualization capabilities, and Terraform for its infrastructure as code (IaC) management, Omniview amalgamates these aspects into a singular, cohesive platform. Our mission is to empower DevOps professionals with a tool that enhances their workflow efficiency, simplifies infrastructure management, and accelerates the deployment lifecycle, all within a familiar yet powerful interface.",
+                content: "Executive Summary linkOmniview is poised to revolutionize the DevOps landscape by offering an integrated development environment (IDE) uniquely tailored for DevOps engineers. Drawing inspiration from industry stalwarts like VSCode for its extensibility, Grafana for its visualization capabilities, and Terraform for its infrastructure as code (IaC) management, Omniview amalgamates these aspects into a singular, cohesive platform. Our mission is to empower DevOps professionals with a tool that enhances their workflow efficiency, simplifies infrastructure management, and accelerates the deployment lifecycle, all within a familiar yet powerful interface.\nStrategic Decisions linkTechnology Stack link Choice of Go and React: Opting for Go for backend development and React for the frontend was driven by Go’s performance and simplicity and React’s flexibility and widespread adoption. This combination ensures a robust, scalable, and maintainable platform. Wails for Desktop Runtime: Integrating Wails enables us to offer a seamless desktop experience across Windows, macOS, and Linux, crucial for the adoption of Omniview by a broad audience. GraphQL and Apollo Client: These technologies were selected for their efficiency in handling data operations, facilitating a responsive user experience even in complex, data-intensive scenarios. Plugin-Driven Architecture link The decision to adopt a plugin-driven architecture stems from the desire to create a flexible and extensible platform. This approach allows Omniview to cater to a wide range of DevOps tools and services, enabling users to tailor the IDE to their specific needs. Focus on Kubernetes and Cloud-Native Technologies link With Kubernetes being a cornerstone of modern infrastructure, Omniview’s deep integration with Kubernetes and cloud-native technologies addresses the growing demand for tools that can manage complex, distributed systems effectively. Goals and Objectives linkShort-Term Goals link Launch a Minimum Viable Product (MVP): Release an MVP that includes core functionalities like cloud and Kubernetes integration, basic plugin support, and essential DevOps workflows. Establish a Community of Early Adopters: Engage with DevOps professionals and gather feedback to iteratively improve Omniview. Mid-Term Goals link Expand the Plugin Ecosystem: Foster a community of plugin developers to expand the range of tools and services integrated with Omniview. Incorporate Advanced Visualization Tools: Enhance real-time monitoring and management capabilities by integrating more sophisticated visualization tools. Long-Term Goals link Become the Go-To IDE for DevOps: Establish Omniview as the industry standard for DevOps engineering, known for its versatility, performance, and user experience. Enterprise Adoption: Launch an enterprise version of Omniview that offers additional features, support, and security for large-scale organizations. Strategic Focus Areas linkNot to Focus On link Replacing Existing IDEs for Software Development: Omniview is not intended to replace general-purpose IDEs but to complement them by focusing on infrastructure and operations. Becoming a Monitoring Solution: While offering monitoring capabilities, Omniview aims not to replace dedicated monitoring solutions like Grafana but to integrate with them for enhanced infrastructure oversight. Key Differentiators link Unified DevOps Environment: Unlike other tools that specialize in either development or operations, Omniview offers a unified platform for both, streamlining workflows and improving productivity. Community-Driven Development: Emphasizing open-source development and community contributions to drive innovation and adaptability. Technology Choices Detailed Analysis linkBackend: Go (Golang) link Rationale: Go was selected for its simplicity, efficiency, and excellent concurrency support, making it ideal for backend services that demand high performance and scalability. Its strong type system and garbage collection feature minimize memory leaks and ensure robustness, essential for the long-running operations common in DevOps workflows. Integration and Extensions: Go’s extensive standard library and powerful package management facilitate seamless integration with a wide array of DevOps tools and cloud APIs. This choice supports the goal of creating a versatile backend capable of handling diverse tasks, from managing cloud resources to orchestrating container deployments. Frontend: React link Rationale: React stands out for its component-based architecture, enabling the development of a dynamic and responsive UI. Its widespread adoption and active community mean a wealth of resources, libraries, and components are available, accelerating development and ensuring a modern user experience. Design Goal: By leveraging React, Omniview aims to offer an extensible and customizable UI that can adapt to the varied needs of DevOps professionals. The use of React also facilitates the development of a plugin system that can integrate smoothly with the UI, allowing for real-time updates and interactions. Desktop Runtime: Wails link Rationale: Wails offers a bridge between the Go backend and the React frontend, encapsulating the application within a native desktop environment without sacrificing the development experience or performance. This choice allows Omniview to deliver a seamless desktop experience across multiple operating systems while leveraging web technologies for the UI. Design Goal: The primary design goal here is to combine the robustness of a native application with the flexibility and ease of development provided by web technologies, ensuring that Omniview can run efficiently on any desktop platform. Data Management: GraphQL and Apollo Client link Rationale: GraphQL’s ability to fetch data with a single API call, requesting exactly what’s needed, perfectly aligns with the dynamic and varied data requirements of DevOps tasks. Paired with Apollo Client on the frontend, it ensures efficient data fetching and state management, critical for the real-time visualization and management features of Omniview. Design Goal: To minimize network overhead and optimize the responsiveness of the application, facilitating a smooth and intuitive user experience even when managing complex and large-scale infrastructure. Extension and Plugin System link Adherence to Familiar Standards: Omniview’s plugin system is designed to be as intuitive as possible, drawing inspiration from VSCode’s extension format. This decision not only leverages existing standards that many developers are familiar with but also eases the transition for extension developers to Omniview’s ecosystem. Rationale: A flexible and powerful plugin system is central to Omniview’s goal of providing a customizable and extensible IDE. By supporting a familiar extension format, Omniview encourages community contributions and the development of a rich ecosystem of plugins tailored to various DevOps needs. Design Goal: To create a plugin architecture that allows for deep integration with Omniview’s core functionalities, enabling third-party developers to extend the IDE’s capabilities in meaningful ways. This includes adding support for new cloud platforms, integrating additional monitoring tools, or enhancing the IDE with new visualization techniques. UI Design: Material-UI and Monaco Editor link Material-UI: Chosen for its comprehensive set of ready-to-use components that adhere to the Material Design principles, Material-UI enables the creation of a visually appealing and highly usable interface. This choice reflects Omniview’s commitment to providing a consistent and intuitive user experience. Monaco Editor: The adoption of Monaco, the code editor that powers VSCode, ensures that users have access to a powerful, feature-rich text editor for editing configuration files, scripts, and IaC definitions. Its extensive language support and customization options make it an ideal choice for Omniview’s diverse user base. Design Goal: To leverage proven UI frameworks and tools that enhance productivity and user satisfaction. By incorporating Material-UI and Monaco Editor, Omniview aims to offer an environment that feels familiar to developers and DevOps engineers, reducing the learning curve and fostering adoption. Overall Design Goals linkThe overarching design philosophy of Omniview is centered around flexibility, performance, and user-centricity. The IDE is conceived to be the nexus of DevOps workflows, providing a comprehensive toolset that caters to the modern DevOps engineer’s needs. This involves:\nSeamless Integration: Ensuring that Omniview can integrate smoothly with a wide range of cloud services, infrastructure management tools, and development practices.\nCustomizability and Extensibility: Empowering users to tailor the IDE to their specific workflows and preferences through a robust plugin system and configurable UI. Performance and Efficiency: Building a platform that remains responsive and efficient, even when managing complex and large-scale infrastructure tasks. Familiarity and Ease of Use: Adopting familiar standards and UI paradigms to minimize the learning curve and enhance productivity. In summary, the strategic decisions regarding technology choices and design goals for Omniview are deeply aligned with its mission to redefine DevOps and infrastructure management. By focusing on a user-first approach and leveraging cutting-edge technologies, Omniview is set to become an indispensable tool for DevOps engineers seeking to navigate the complexities of modern infrastructure environments.\nConclusion linkOmniview stands at the convergence of development and operations, offering a platform that not only respects the traditions of software engineering but also embraces the future of cloud-native infrastructure. By prioritizing the needs of DevOps engineers, fostering a vibrant community, and focusing on strategic integrations and extensibility, Omniview is set to redefine what it means to work in DevOps and infrastructure management.\n"
+            }
+        );
+    index.add(
+            {
+                id:  19 ,
+                href: "\/docs\/",
+                title: "Docs",
+                description: "",
+                content: ""
+            }
+        );
+    search.addEventListener('input', show_results, true);
+
+    function show_results(){
+        const maxResult =  5 ;
+        const minlength =  0 ;
+        var searchQuery = sanitizeHTML(this.value);
+        var results = index.search(searchQuery, {limit: maxResult, enrich: true});
+
+        
+        const flatResults = new Map(); 
+        for (const result of results.flatMap(r => r.result)) {
+        if (flatResults.has(result.doc.href)) continue;
+        flatResults.set(result.doc.href, result.doc);
+        }
+
+        suggestions.innerHTML = "";
+        suggestions.classList.remove('d-none');
+
+        
+        if (searchQuery.length < minlength) {
+            const minCharMessage = document.createElement('div')
+            minCharMessage.innerHTML = `Please type at least <strong>${minlength}</strong> characters`
+            minCharMessage.classList.add("suggestion__no-results");
+            suggestions.appendChild(minCharMessage);
+            return;
+        } else {
+            
+            if (flatResults.size === 0 && searchQuery) {
+                const noResultsMessage = document.createElement('div')
+                noResultsMessage.innerHTML = "No results for" + ` "<strong>${searchQuery}</strong>"`
+                noResultsMessage.classList.add("suggestion__no-results");
+                suggestions.appendChild(noResultsMessage);
+                return;
+            }
+        }
+
+        
+        for(const [href, doc] of flatResults) {
+            const entry = document.createElement('div');
+            suggestions.appendChild(entry);
+
+            const a = document.createElement('a');
+            a.href = href;
+            entry.appendChild(a);
+
+            const title = document.createElement('span');
+            title.textContent = doc.title;
+            title.classList.add("suggestion__title");
+            a.appendChild(title);
+
+            const description = document.createElement('span');
+            description.textContent = doc.description;
+            description.classList.add("suggestion__description");
+            a.appendChild(description);
+
+            suggestions.appendChild(entry);
+
+            if(suggestions.childElementCount == maxResult) break;
+        }
+    }
+    }());
+</script>
+    
+</body></html>

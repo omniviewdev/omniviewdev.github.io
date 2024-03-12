@@ -2,14 +2,12 @@
 weight: 999
 title: "Philosphy"
 description: ""
-icon: "article"
+icon: "lightbulb"
 date: "2024-03-09T16:53:16-06:00"
 lastmod: "2024-03-09T16:53:16-06:00"
 draft: false
 toc: true
 ---
-
-# Philosophy and Strategic Overview of Omniview
 
 ## Executive Summary
 
