@@ -1,8 +1,8 @@
 ---
 weight: 102
-title: "🌎 Global Configuration"
+title: "Global Configuration"
 description: "Global configuration reference."
-icon: "globe"
+icon: "public"
 date: "2024-03-11T21:12:47-05:00"
 lastmod: "2024-03-11T21:12:47-05:00"
 draft: false

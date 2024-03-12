@@ -13,19 +13,19 @@
   src: local("Material Symbols Outlined"), local("Material Icons"), local("MaterialIcons-Outlined"), url("../fonts/material-symbols-outlined.woff2") format("woff2"); }
 
 :root {
-  --primary: var(--blue);
-  --primary-50: var(--blue-50);
-  --primary-100: var(--blue-100);
-  --primary-200: var(--blue-200);
-  --primary-300: var(--blue-300);
-  --primary-400: var(--blue-400);
-  --primary-800: var(--blue-800);
-  --primary-hsl: var(--blue-500-hsl);
-  --primary-50-hsl: var(--blue-50-hsl);
-  --primary-100-hsl: var(--blue-100-hsl);
-  --primary-200-hsl: var(--blue-200-hsl);
-  --primary-300-hsl: var(--blue-300-hsl);
-  --primary-800-hsl: var(--blue-800-hsl); }
+  --primary: var(--cyan);
+  --primary-50: var(--cyan-50);
+  --primary-100: var(--cyan-100);
+  --primary-200: var(--cyan-200);
+  --primary-300: var(--cyan-300);
+  --primary-400: var(--cyan-400);
+  --primary-800: var(--cyan-800);
+  --primary-hsl: var(--cyan-500-hsl);
+  --primary-50-hsl: var(--cyan-50-hsl);
+  --primary-100-hsl: var(--cyan-100-hsl);
+  --primary-200-hsl: var(--cyan-200-hsl);
+  --primary-300-hsl: var(--cyan-300-hsl);
+  --primary-800-hsl: var(--cyan-800-hsl); }
 
 /*!
    * Bootstrap  v5.3.2 (https://getbootstrap.com/)
@@ -10386,18 +10386,6 @@ button:not(:disabled) {
   outline: none; }
 
 :root {
-  --modal-bg: var(--gray-50); }
-
-[data-dark-mode] {
-  --modal-bg: var(--gray-900); }
-
-.modal {
-  --bs-modal-bg: var(--modal-bg); }
-
-.modal-header {
-  border-bottom: none; }
-
-:root {
   --breadcrumb-item-color: var(--primary); }
 
 [data-dark-mode] {
@@ -10441,6 +10429,31 @@ button:not(:disabled) {
   background-color: var(--btn-primary-bg) !important;
   border: 1px solid var(--btn-primary-border) !important;
   color: var(--btn-primary-color) !important; }
+
+:root {
+  --dropdown-link-color: var(--text-default);
+  --dropdown-bg: var(--body-bg);
+  --dropdown-border-color: var(--alert-border-color);
+  --dropdown-border-radius: 0 0 4px 4px;
+  --dropdown-link-hover-color: var(--primary); }
+
+[data-dark-mode] {
+  --dropdown-link-color: var(--text-default);
+  --dropdown-bg: var(--body-bg);
+  --dropdown-border-color: var(--alert-border-color);
+  --dropdown-border-radius: 0 0 4px 4px;
+  --dropdown-link-hover-color: var(--primary-300); }
+
+.dropdown-menu {
+  --bs-dropdown-min-width: 7rem;
+  --bs-dropdown-link-color: var(--dropdown-link-color);
+  --bs-dropdown-bg: var(--dropdown-bg);
+  --bs-dropdown-border-color: var(--dropdown-border-color);
+  --bs-dropdown-link-hover-bg: none;
+  --bs-dropdown-link-hover-color: var(--dropdown-link-hover-color);
+  --bs-dropdown-border-radius: var(--dropdown-border-radius);
+  transform: translate(0px, 57px) !important;
+  border-top: none; }
 
 :root {
   --alert-border-color: #dee2e6;

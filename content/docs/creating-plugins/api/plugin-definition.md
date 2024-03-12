@@ -1,8 +1,8 @@
 ---
 weight: 104
-title: "⚙️  Plugin Definition"
+title: "Plugin Definition"
 description: "Reference for the plugin definition file."
-icon: "gear"
+icon: "settings"
 date: "2024-03-11T21:12:47-05:00"
 lastmod: "2024-03-11T21:12:47-05:00"
 draft: false

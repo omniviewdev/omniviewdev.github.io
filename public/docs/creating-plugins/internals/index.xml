@@ -6,14 +6,21 @@
     <description>Recent content in Internals on Omniview - The Integration DevOps Environment</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Mar 2024 12:25:00 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2024 13:30:24 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/docs/creating-plugins/internals/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Overview</title>
+      <title>The Plugin Engine</title>
       <link>http://localhost:1313/docs/creating-plugins/internals/overview/</link>
       <pubDate>Tue, 12 Mar 2024 12:25:00 -0500</pubDate>
       <guid>http://localhost:1313/docs/creating-plugins/internals/overview/</guid>
-      <description>Plugins are a core part of the Omniview ecosystem, and the plugin engine is designed to be both flexible and extendable.</description>
+      <description>Plugins are a core part of the Omniview ecosystem, and the plugin engine is designed to be both flexible and extendable. In order to satisfy the various requirements of various plugin types, the core engine embeds various controllers, engines, and interfaces to provide a consistent and reliable experience for plugin developers and users.&#xA;At it&amp;rsquo;s core, a plugin consists of a few key components:&#xA;Plugin Definition linkThe plugin definition includes metadata that defines the details and capabilities of the plugin, including the name, description, type, and other details.</description>
+    </item>
+    <item>
+      <title>Resource Manager</title>
+      <link>http://localhost:1313/docs/creating-plugins/internals/resource-manager/</link>
+      <pubDate>Tue, 12 Mar 2024 13:30:24 -0500</pubDate>
+      <guid>http://localhost:1313/docs/creating-plugins/internals/resource-manager/</guid>
+      <description>The Resource Manager is responsible for defining available resources, their capabilities and metadata, and performing discovery against backends to determine which auth contexts have access to which resources. This is crucial for resource backends like Kubernetes, where different auth contexts (in the case of Kubernetes, and uth context would be a Cluster Context) can have different resources (or versions of a resource) available (one cluster on 1.26 may have v2.HorizontalPodAutoscaler, while another on 1.</description>
     </item>
   </channel>
 </rss>

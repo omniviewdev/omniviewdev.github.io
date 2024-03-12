@@ -1,6 +1,6 @@
 ---
 weight: 101
-title: "🔍 PluginContext"
+title: "PluginContext"
 description: "Main content passed to plugins."
 icon: "bolt"
 date: "2024-03-11T21:12:15-05:00"

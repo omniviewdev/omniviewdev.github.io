@@ -6,7 +6,7 @@
     <description>Recent content on Omniview - The Integration DevOps Environment</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Mar 2024 12:25:00 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2024 13:30:24 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction</title>
@@ -44,18 +44,25 @@
       <description>Omniview was built to provide a powerful and flexible platform for DevOps engineers to manage and visualize infrastructure. One of the key features that makes Omniview so versatile is its plugin system. This system allows users to extend the core functionality of Omniview by creating custom plugins that integrate additional tools, services, and functionalities. Whether you want to interact with cloud resources, visualize metrics, or automate workflows, Omniview&amp;rsquo;s plugin system can cater to a wide range of DevOps needs.</description>
     </item>
     <item>
-      <title>🔍 PluginContext</title>
+      <title>PluginContext</title>
       <link>http://localhost:1313/docs/creating-plugins/api/plugin-context/</link>
       <pubDate>Mon, 11 Mar 2024 21:12:15 -0500</pubDate>
       <guid>http://localhost:1313/docs/creating-plugins/api/plugin-context/</guid>
       <description>Structure linkEvery time a plugin is called by the IDE (or a by another plugin), a PluginContext is generated and passed throughout, providing access to the core functionality and data of Omniview. The context provides access to various aspects of the request, including the request options, authentication context, resource context, and plugin configuration.&#xA;The PluginContext struct is defined as follows:&#xA;type PluginContext struct { Context context.Context RequestID string RequesterID string RequestOptions *RequestOptions AuthContext *AuthContext ResourceContext *ResourceContext PluginConfig *PluginConfig GlobalConfig *GlobalConfig } Key Default Description Context N/A Standard context for the request, which can be used for cancellation and timeouts.</description>
     </item>
     <item>
-      <title>🌎 Global Configuration</title>
+      <title>Global Configuration</title>
       <link>http://localhost:1313/docs/creating-plugins/api/global-configuration/</link>
       <pubDate>Mon, 11 Mar 2024 21:12:47 -0500</pubDate>
       <guid>http://localhost:1313/docs/creating-plugins/api/global-configuration/</guid>
       <description>The following is a reference for the global configuration available to plugins within Omniview. Each section provides a description of the configuration options and their default values.&#xA;The global configuration can also be found on the Settings page by clicking the gear icon in the top right corner of the Omniview interface. The identifiers can be enabled in the UI under the Development section of the configuration area.&#xA;warning Omniview is under heavy active development - as such, the global configuration is subject to frequent breaking changes until the first stable release.</description>
+    </item>
+    <item>
+      <title>Plugin Definition</title>
+      <link>http://localhost:1313/docs/creating-plugins/api/plugin-definition/</link>
+      <pubDate>Mon, 11 Mar 2024 21:12:47 -0500</pubDate>
+      <guid>http://localhost:1313/docs/creating-plugins/api/plugin-definition/</guid>
+      <description>The following is a reference for the plugin definition file. This file is used to define the plugin&amp;rsquo;s metadata and capabilities.&#xA;warning Omniview is under heavy active development - as such, the plugin definition is subject to frequent breaking changes until the first stable release. Key Type Description </description>
     </item>
     <item>
       <title>Overview</title>
@@ -86,11 +93,18 @@
       <description>Log plugins provide capabilities for querying and visualizing logs against resources, connecting to various log backends to provide a unified view of logs across different systems.&#xA;warning Omniview is under heavy active development - the LogPlugin SDK is subject to frequent breaking changes until the first stable release. </description>
     </item>
     <item>
-      <title>Overview</title>
+      <title>The Plugin Engine</title>
       <link>http://localhost:1313/docs/creating-plugins/internals/overview/</link>
       <pubDate>Tue, 12 Mar 2024 12:25:00 -0500</pubDate>
       <guid>http://localhost:1313/docs/creating-plugins/internals/overview/</guid>
-      <description>Plugins are a core part of the Omniview ecosystem, and the plugin engine is designed to be both flexible and extendable.</description>
+      <description>Plugins are a core part of the Omniview ecosystem, and the plugin engine is designed to be both flexible and extendable. In order to satisfy the various requirements of various plugin types, the core engine embeds various controllers, engines, and interfaces to provide a consistent and reliable experience for plugin developers and users.&#xA;At it&amp;rsquo;s core, a plugin consists of a few key components:&#xA;Plugin Definition linkThe plugin definition includes metadata that defines the details and capabilities of the plugin, including the name, description, type, and other details.</description>
+    </item>
+    <item>
+      <title>Resource Manager</title>
+      <link>http://localhost:1313/docs/creating-plugins/internals/resource-manager/</link>
+      <pubDate>Tue, 12 Mar 2024 13:30:24 -0500</pubDate>
+      <guid>http://localhost:1313/docs/creating-plugins/internals/resource-manager/</guid>
+      <description>The Resource Manager is responsible for defining available resources, their capabilities and metadata, and performing discovery against backends to determine which auth contexts have access to which resources. This is crucial for resource backends like Kubernetes, where different auth contexts (in the case of Kubernetes, and uth context would be a Cluster Context) can have different resources (or versions of a resource) available (one cluster on 1.26 may have v2.HorizontalPodAutoscaler, while another on 1.</description>
     </item>
     <item>
       <title>Philosphy</title>

@@ -10,7 +10,7 @@ hero:
     soft: true # boolean
 
   title: ""
-  subtitle: The future-proof, highly extendable IDE for DevOps engineering, transforming how you visualize, manage, and interact with your infrastructure..
+  subtitle: The future-proof, highly extendable IDE for DevOps engineering, transforming how you visualize, manage, and interact with your infrastructure.
 
   image:
     path: "images" # path to image under configured assets directory. default 'images'
@@ -34,4 +34,46 @@ hero:
   titleLogo:
     path: "images"
     filename: "logo.png"
-    height: "150px"
+    height: "130px"
+
+# Feature Grid
+featureGrid:
+  enable: true
+  weight: 20
+  template: feature grid
+
+  title: Why choose Omniview?
+  subtitle: Omniview is the premier Integrated Development Environment (IDE) tailored for DevOps engineers. It seamlessly integrates development and operation tools to provide a unified platform across various environments. Discover its standout features below.
+
+  items:
+    - title: Unified Interface
+      icon: view_quilt
+      description: A single intuitive interface that combines code editing, resource management, and operational tools, streamlining workflows across different clouds and platforms.
+
+    - title: Powerful Plugin System
+      icon: power
+      description: Extend functionality with ease thanks to a powerful plugin engine, paired with an extensive plugin ecosystem.
+
+    - title: Real-time Visualization and Monitoring
+      icon: insights
+      description: Real-time visualization tools for state and performance metrics of your infrastructure, combined with powerful logging capabilities for efficient monitoring and troubleshooting.
+
+    - title: IaC Management
+      icon: code
+      description: Enhance your Infrastructure as Code (IaC) capabilities with robust support for popular IaC tools and a custom Terraform shim for improved compatibility and flexibility.
+
+    - title: Kubernetes Native
+      icon: sailing
+      description: Deep Kubernetes integration provides intuitive deployment, management, and visualization tools for Kubernetes resources within the unified Omniview interface.
+
+    - title: Multi-Cloud Platform Support
+      icon: cloud_queue
+      description: Manage resources across AWS, Azure, Google Cloud, and more, with a broad compatibility that allows multi-cloud operations without the need for multiple tools.
+
+    - title: Community-Driven
+      icon: group_work
+      description: Built on open-source principles, Omniview encourages innovation and collaboration, fostering a tool that grows with its community's needs.
+
+    - title: Enterprise-Ready
+      icon: business_center
+      description: Omniview's enterprise version offers advanced features for larger organizations, providing a balance between community innovation and commercial support.

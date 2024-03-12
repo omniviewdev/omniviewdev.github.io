@@ -2,7 +2,7 @@
 weight: 3
 title: "Key Features"
 description: "Key features and architecture of Omniview. Learn about the powerful capabilities and the underlying architecture that make Omniview a revolutionary IDE for DevOps."
-icon: "article"
+icon: "check_box"
 date: "2024-03-09T16:53:23-06:00"
 lastmod: "2024-03-09T16:53:23-06:00"
 draft: false
