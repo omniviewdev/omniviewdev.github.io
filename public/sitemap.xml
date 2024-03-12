@@ -6,34 +6,70 @@
     <lastmod>2024-03-09T17:04:36-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/getting-started/</loc>
-    <lastmod>2024-03-09T17:04:36-06:00</lastmod>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/key-features/</loc>
-    <lastmod>2024-03-09T17:04:36-06:00</lastmod>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/core-concepts/</loc>
-    <lastmod>2024-03-09T17:04:36-06:00</lastmod>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/creating-plugins/overview/</loc>
-    <lastmod>2024-03-11T21:10:42-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/creating-plugins/</loc>
-    <lastmod>2024-03-09T16:57:24-06:00</lastmod>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/creating-plugins/api/</loc>
-    <lastmod>2024-03-11T21:12:47-05:00</lastmod>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/creating-plugins/api/plugin-context/</loc>
-    <lastmod>2024-03-11T21:12:15-05:00</lastmod>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/api/global-configuration/</loc>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/resource/</loc>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/resource/overview/</loc>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/</loc>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/exec/</loc>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/metrics/overview/</loc>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/log/</loc>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/exec/overview/</loc>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/log/overview/</loc>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/metrics/</loc>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/event/</loc>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/internals/</loc>
+    <lastmod>2024-03-12T12:24:46-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/creating-plugins/internals/overview/</loc>
+    <lastmod>2024-03-12T12:25:00-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/philosphy/</loc>
-    <lastmod>2024-03-09T17:04:36-06:00</lastmod>
+    <lastmod>2024-03-12T00:02:26-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/</loc>
-    <lastmod>2024-03-11T21:12:47-05:00</lastmod>
+    <lastmod>2024-03-12T12:25:00-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-03-11T21:12:47-05:00</lastmod>
+    <lastmod>2024-03-12T12:25:00-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>

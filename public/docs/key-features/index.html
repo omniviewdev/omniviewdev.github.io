@@ -35,7 +35,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/docs/key-features/" /><meta property="og:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_13148048109143975219.png"/><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2024-03-09T16:53:23-06:00" />
-<meta property="article:modified_time" content="2024-03-09T17:04:36-06:00" /><meta name="twitter:card" content="summary_large_image"/>
+<meta property="article:modified_time" content="2024-03-12T00:02:26-05:00" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_13148048109143975219.png"/>
 <meta name="twitter:title" content="Key Features"/>
 <meta name="twitter:description" content="Key features and architecture of Omniview. Learn about the powerful capabilities and the underlying architecture that make Omniview a revolutionary IDE for DevOps."/>
@@ -243,6 +243,26 @@
                                                 </button>
                                                 <div class="sidebar-submenu ">
                                                     <ul>
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        
+                                    
+                                        
+                                        
+                                            <li class="sidebar-dropdown nested  ">
+                                                <button class="btn">
+                                                    
+                                                    Internals
+                                                </button>
+                                                <div class="sidebar-submenu ">
+                                                    <ul>
+                                                        
+                                                            
+                                                            
+                                                                <li class=" "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/internals/overview/">Overview</a></li>
+                                                            
                                                         
                                                     </ul>
                                                 </div>
@@ -517,9 +537,9 @@
     <div id="last-modified" class="mt-1">
         <p class="mb-0 fw-semibold">Last updated <span
             id="relativetime"
-            data-authdate="2024-03-09T17:04:36-0600"
-            title="09 Mar 2024, 17:04 CST">
-            09 Mar 2024, 17:04 CST
+            data-authdate="2024-03-12T00:02:26-0500"
+            title="12 Mar 2024, 00:02 CDT">
+            12 Mar 2024, 00:02 CDT
         </span>. <span class="material-icons size-20 align-text-bottom opacity-75">history</span>
         </p>
     </div>
@@ -853,6 +873,20 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
     
@@ -991,7 +1025,7 @@
                 href: "\/docs\/creating-plugins\/exec\/overview\/",
                 title: "Overview",
                 description: "Exec plugins provide capabilities for executing commands and providing shell access to resources.",
-                content: "Exec plugins provide capabilities for executing commands and providing shell access to resources. Exec plugins provide a means to authenticate to a machine that can be used to execute commands. This is useful for tasks such as running scripts, gathering information, or executing commands on remote systems.\nThe Omniview core provides three primary built-in exec plugins:\nLocal SSH Docker However, you can also create custom exec plugins to support other protocols or systems. For example:\nAWS Session Manager Azure Cloud Shell Kubernetes Exec The ExecPlugin SDK provides a set of interfaces and types that you can use to create custom exec plugins. In the following section, we’ll go through how to use the ExecPlugin SDK to recreate the SSH exec plugin.\ninfo Omniview is under heavy active development - the ExecPlugin SDK is subject to frequent breaking changes until the first stable release. "
+                content: "Exec plugins provide capabilities for executing commands and providing shell access to resources. Exec plugins provide a means to authenticate to a machine that can be used to execute commands. This is useful for tasks such as running scripts, gathering information, or executing commands on remote systems.\nThe Omniview core provides two primary built-in exec plugins:\nLocal SSH However, you can also create custom exec plugins to support other protocols or systems. For example:\nAWS Session Manager Kubernetes Exec The ExecPlugin SDK provides a set of interfaces and types that you can use to create custom exec plugins. In the following section, we’ll go through how to use the ExecPlugin SDK to recreate the SSH exec plugin.\nOmniview is under heavy active development - the ExecPlugin SDK is subject to frequent breaking changes until the first stable release. "
             }
         );
     index.add(
@@ -1024,6 +1058,24 @@
     index.add(
             {
                 id:  18 ,
+                href: "\/docs\/creating-plugins\/internals\/",
+                title: "Internals",
+                description: "A breakdown of the internals of how plugins work.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  19 ,
+                href: "\/docs\/creating-plugins\/internals\/overview\/",
+                title: "Overview",
+                description: "A breakdown of the internals of how plugins work.",
+                content: "Plugins are a core part of the Omniview ecosystem, and the plugin engine is designed to be both flexible and extendable.\n"
+            }
+        );
+    index.add(
+            {
+                id:  20 ,
                 href: "\/docs\/philosphy\/",
                 title: "Philosphy",
                 description: "Executive Summary linkOmniview is poised to revolutionize the DevOps landscape by offering an integrated development environment (IDE) uniquely tailored for DevOps engineers. Drawing inspiration from industry stalwarts like VSCode for its extensibility, Grafana for its visualization capabilities, and Terraform for its infrastructure as code (IaC) management, Omniview amalgamates these aspects into a singular, cohesive platform. Our mission is to empower DevOps professionals with a tool that enhances their workflow efficiency, simplifies infrastructure management, and accelerates the deployment lifecycle, all within a familiar yet powerful interface.",
@@ -1032,7 +1084,7 @@
         );
     index.add(
             {
-                id:  19 ,
+                id:  21 ,
                 href: "\/docs\/",
                 title: "Docs",
                 description: "",

@@ -6,7 +6,7 @@
     <description>Recent content in API on Omniview - The Integration DevOps Environment</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Mar 2024 21:12:47 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2024 00:02:26 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/docs/creating-plugins/api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🔍 PluginContext</title>
@@ -20,6 +20,13 @@
       <link>http://localhost:1313/docs/creating-plugins/api/global-configuration/</link>
       <pubDate>Mon, 11 Mar 2024 21:12:47 -0500</pubDate>
       <guid>http://localhost:1313/docs/creating-plugins/api/global-configuration/</guid>
+      <description>The following is a reference for the global configuration available to plugins within Omniview. Each section provides a description of the configuration options and their default values.&#xA;The global configuration can also be found on the Settings page by clicking the gear icon in the top right corner of the Omniview interface. The identifiers can be enabled in the UI under the Development section of the configuration area.&#xA;warning Omniview is under heavy active development - as such, the global configuration is subject to frequent breaking changes until the first stable release.</description>
+    </item>
+    <item>
+      <title>⚙️  Plugin Definition</title>
+      <link>http://localhost:1313/docs/creating-plugins/api/plugin-definition/</link>
+      <pubDate>Mon, 11 Mar 2024 21:12:47 -0500</pubDate>
+      <guid>http://localhost:1313/docs/creating-plugins/api/plugin-definition/</guid>
       <description>The following is a reference for the global configuration available to plugins within Omniview. Each section provides a description of the configuration options and their default values.&#xA;The global configuration can also be found on the Settings page by clicking the gear icon in the top right corner of the Omniview interface. The identifiers can be enabled in the UI under the Development section of the configuration area.&#xA;warning Omniview is under heavy active development - as such, the global configuration is subject to frequent breaking changes until the first stable release.</description>
     </item>
   </channel>

@@ -147,6 +147,11 @@
                                                                 <li class=" "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/api/global-configuration/">🌎 Global Configuration</a></li>
                                                             
                                                         
+                                                            
+                                                            
+                                                                <li class=" "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/api/plugin-definition/">⚙️  Plugin Definition</a></li>
+                                                            
+                                                        
                                                     </ul>
                                                 </div>
                                             </li>
@@ -241,6 +246,26 @@
                                                 </button>
                                                 <div class="sidebar-submenu ">
                                                     <ul>
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        
+                                    
+                                        
+                                        
+                                            <li class="sidebar-dropdown nested  ">
+                                                <button class="btn">
+                                                    
+                                                    Internals
+                                                </button>
+                                                <div class="sidebar-submenu ">
+                                                    <ul>
+                                                        
+                                                            
+                                                            
+                                                                <li class=" "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/internals/overview/">The Plugin Engine</a></li>
+                                                            
                                                         
                                                     </ul>
                                                 </div>
@@ -447,6 +472,23 @@
                     <div class="card-body p-0 content">
                         <p class="fs-5 fw-semibold card-title mb-1">🌎 Global Configuration</p>
                         <p class="para card-text mb-0">Global configuration reference.</p>
+                    </div>
+                    
+                </div>
+            </a>
+        </div>
+        
+        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
+            <a class="text-decoration-none text-reset" href="http://localhost:1313/docs/creating-plugins/api/plugin-definition/">
+                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
+                    <span class="icon-color d-flex my-3">
+                        <i class="material-icons align-middle">globe</i>
+                        
+                        
+                    </span>
+                    <div class="card-body p-0 content">
+                        <p class="fs-5 fw-semibold card-title mb-1">⚙️  Plugin Definition</p>
+                        <p class="para card-text mb-0">Reference for the plugin definition file.</p>
                     </div>
                     
                 </div>
@@ -756,6 +798,27 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
     
@@ -837,6 +900,15 @@
     index.add(
             {
                 id:  8 ,
+                href: "\/docs\/creating-plugins\/api\/plugin-definition\/",
+                title: "⚙️  Plugin Definition",
+                description: "Reference for the plugin definition file.",
+                content: "The following is a reference for the global configuration available to plugins within Omniview. Each section provides a description of the configuration options and their default values.\nThe global configuration can also be found on the Settings page by clicking the gear icon in the top right corner of the Omniview interface. The identifiers can be enabled in the UI under the Development section of the configuration area.\nwarning Omniview is under heavy active development - as such, the global configuration is subject to frequent breaking changes until the first stable release. Key Type Description "
+            }
+        );
+    index.add(
+            {
+                id:  9 ,
                 href: "\/docs\/creating-plugins\/resource\/",
                 title: "Resource Plugins",
                 description: "Resource plugins enable interaction with and management of various infrastructure resources.",
@@ -845,7 +917,7 @@
         );
     index.add(
             {
-                id:  9 ,
+                id:  10 ,
                 href: "\/docs\/creating-plugins\/resource\/overview\/",
                 title: "Overview",
                 description: "Resource plugins enable interaction with and management of various infrastructure resources.",
@@ -854,7 +926,7 @@
         );
     index.add(
             {
-                id:  10 ,
+                id:  11 ,
                 href: "\/docs\/creating-plugins\/",
                 title: "Creating Plugins",
                 description: "Learn how to create custom plugins to extend the functionality of Omniview.",
@@ -863,7 +935,7 @@
         );
     index.add(
             {
-                id:  11 ,
+                id:  12 ,
                 href: "\/docs\/creating-plugins\/exec\/",
                 title: "Exec Plugins",
                 description: "Exec plugins provide capabilities for executing commands on remote systems.",
@@ -872,7 +944,7 @@
         );
     index.add(
             {
-                id:  12 ,
+                id:  13 ,
                 href: "\/docs\/creating-plugins\/metrics\/overview\/",
                 title: "Overview",
                 description: "Metrics plugins provide capabilities providing metrics to reosurces.",
@@ -881,7 +953,7 @@
         );
     index.add(
             {
-                id:  13 ,
+                id:  14 ,
                 href: "\/docs\/creating-plugins\/log\/",
                 title: "Log Plugins",
                 description: "Log plugins provide capabilities for querying and visualizing logs.",
@@ -890,16 +962,16 @@
         );
     index.add(
             {
-                id:  14 ,
+                id:  15 ,
                 href: "\/docs\/creating-plugins\/exec\/overview\/",
                 title: "Overview",
                 description: "Exec plugins provide capabilities for executing commands and providing shell access to resources.",
-                content: "Exec plugins provide capabilities for executing commands and providing shell access to resources. Exec plugins provide a means to authenticate to a machine that can be used to execute commands. This is useful for tasks such as running scripts, gathering information, or executing commands on remote systems.\nThe Omniview core provides three primary built-in exec plugins:\nLocal SSH Docker However, you can also create custom exec plugins to support other protocols or systems. For example:\nAWS Session Manager Azure Cloud Shell Kubernetes Exec The ExecPlugin SDK provides a set of interfaces and types that you can use to create custom exec plugins. In the following section, we’ll go through how to use the ExecPlugin SDK to recreate the SSH exec plugin.\ninfo Omniview is under heavy active development - the ExecPlugin SDK is subject to frequent breaking changes until the first stable release. "
+                content: "Exec plugins provide capabilities for executing commands and providing shell access to resources. Exec plugins provide a means to authenticate to a machine that can be used to execute commands. This is useful for tasks such as running scripts, gathering information, or executing commands on remote systems.\nThe Omniview core provides two primary built-in exec plugins:\nLocal SSH However, you can also create custom exec plugins to support other protocols or systems. For example:\nAWS Session Manager Kubernetes Exec The ExecPlugin SDK provides a set of interfaces and types that you can use to create custom exec plugins. In the following section, we’ll go through how to use the ExecPlugin SDK to recreate the SSH exec plugin.\nOmniview is under heavy active development - the ExecPlugin SDK is subject to frequent breaking changes until the first stable release. "
             }
         );
     index.add(
             {
-                id:  15 ,
+                id:  16 ,
                 href: "\/docs\/creating-plugins\/log\/overview\/",
                 title: "Overview",
                 description: "Log plugins provide capabilities for querying and visualizing logs against resources, connecting to various log backends.",
@@ -908,7 +980,7 @@
         );
     index.add(
             {
-                id:  16 ,
+                id:  17 ,
                 href: "\/docs\/creating-plugins\/metrics\/",
                 title: "Metrics Plugins",
                 description: "Metrics plugins provide capabilities for querying and visualizing metrics.",
@@ -917,7 +989,7 @@
         );
     index.add(
             {
-                id:  17 ,
+                id:  18 ,
                 href: "\/docs\/creating-plugins\/event\/",
                 title: "Event Plugins",
                 description: "Event plugins provide capabilities for querying and providing hook points for events within resource backends.",
@@ -926,7 +998,25 @@
         );
     index.add(
             {
-                id:  18 ,
+                id:  19 ,
+                href: "\/docs\/creating-plugins\/internals\/",
+                title: "Internals",
+                description: "A breakdown of the internals of how plugins work.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  20 ,
+                href: "\/docs\/creating-plugins\/internals\/overview\/",
+                title: "The Plugin Engine",
+                description: "A breakdown of the internals of how plugins work.",
+                content: "Plugins are a core part of the Omniview ecosystem, and the plugin engine is designed to be both flexible and extendable. In order to satisfy the various requirements of various plugin types, the core engine embeds various controllers, engines, and interfaces to provide a consistent and reliable experience for plugin developers and users.\nAt it’s core, a plugin consists of a few key components:\nPlugin Definition linkThe plugin definition includes metadata that defines the details and capabilities of the plugin, including the name, description, type, and other details. This is stored in a plugin.yaml file, and is used by the plugin host to load, verify, and execute the plugin.\nThe plugin definition can be found here with all of it’s options.\nPlugin Definition: This is the metadata that defines the plugin, including the name, description, type, and other details. Plugin Host: This is the runtime environment for the plugin, and is responsible for loading and executing the plugin. UI Components: These are the various UI components that the plugin provides, such as views, forms, and other elements. "
+            }
+        );
+    index.add(
+            {
+                id:  21 ,
                 href: "\/docs\/philosphy\/",
                 title: "Philosphy",
                 description: "Executive Summary linkOmniview is poised to revolutionize the DevOps landscape by offering an integrated development environment (IDE) uniquely tailored for DevOps engineers. Drawing inspiration from industry stalwarts like VSCode for its extensibility, Grafana for its visualization capabilities, and Terraform for its infrastructure as code (IaC) management, Omniview amalgamates these aspects into a singular, cohesive platform. Our mission is to empower DevOps professionals with a tool that enhances their workflow efficiency, simplifies infrastructure management, and accelerates the deployment lifecycle, all within a familiar yet powerful interface.",
@@ -935,7 +1025,7 @@
         );
     index.add(
             {
-                id:  19 ,
+                id:  22 ,
                 href: "\/docs\/",
                 title: "Docs",
                 description: "",

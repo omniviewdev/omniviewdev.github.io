@@ -14,10 +14,10 @@
 
 <html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
-    <title>Overview | Omniview - The Integration DevOps Environment</title>
+    <title>Internals | Omniview - The Integration DevOps Environment</title>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Resource plugins enable interaction with and management of various infrastructure resources.">
+    <meta name="description" content="A breakdown of the internals of how plugins work.">
     <meta name="keywords" content="Documentation, Hugo, Hugo Theme, Bootstrap" />
     <meta name="author" content="Colin Wilson - Lotus Labs" />
     <meta name="email" content="support@aigis.uk" />
@@ -30,15 +30,13 @@
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="manifest" crossorigin="use-credentials" href="http://localhost:1313/site.webmanifest">
-<meta property="og:title" content="Overview" />
-<meta property="og:description" content="Resource plugins enable interaction with and management of various infrastructure resources." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/docs/creating-plugins/resource/overview/" /><meta property="og:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_13389959678507803061.png"/><meta property="article:section" content="docs" />
-<meta property="article:published_time" content="2024-03-09T16:57:24-06:00" />
-<meta property="article:modified_time" content="2024-03-12T00:02:26-05:00" /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_13389959678507803061.png"/>
-<meta name="twitter:title" content="Overview"/>
-<meta name="twitter:description" content="Resource plugins enable interaction with and management of various infrastructure resources."/>
+<meta property="og:title" content="Internals" />
+<meta property="og:description" content="A breakdown of the internals of how plugins work." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/docs/creating-plugins/internals/" /><meta property="og:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_9589672285861239687.png"/><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_9589672285861239687.png"/>
+<meta name="twitter:title" content="Internals"/>
+<meta name="twitter:description" content="A breakdown of the internals of how plugins work."/>
 
     
     <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
@@ -156,17 +154,17 @@
                                     
                                         
                                         
-                                            <li class="sidebar-dropdown nested  current active">
+                                            <li class="sidebar-dropdown nested  ">
                                                 <button class="btn">
                                                     
                                                     Resource Plugins
                                                 </button>
-                                                <div class="sidebar-submenu d-block">
+                                                <div class="sidebar-submenu ">
                                                     <ul>
                                                         
                                                             
                                                             
-                                                                <li class="current "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/resource/overview/">Overview</a></li>
+                                                                <li class=" "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/resource/overview/">Overview</a></li>
                                                             
                                                         
                                                     </ul>
@@ -251,12 +249,12 @@
                                     
                                         
                                         
-                                            <li class="sidebar-dropdown nested  ">
+                                            <li class="sidebar-dropdown nested  current active">
                                                 <button class="btn">
                                                     
                                                     Internals
                                                 </button>
-                                                <div class="sidebar-submenu ">
+                                                <div class="sidebar-submenu d-block">
                                                     <ul>
                                                         
                                                             
@@ -406,18 +404,10 @@
                     <meta itemprop="position" content='2' />
                 </li>
             
-            
-                <li class="breadcrumb-item text-capitalize" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="/docs/creating-plugins/resource/">
-                        <span itemprop="name">Resource Plugins</span>
-                    </a>
-                    <meta itemprop="position" content='3' />
-                </li>
-            
         
             <li class="breadcrumb-item text-capitalize active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span itemprop="name">Overview</span>
-                <meta itemprop="position" content='4' />
+                <span itemprop="name">Internals</span>
+                <meta itemprop="position" content='3' />
             </li>
         
     </ul>
@@ -425,13 +415,13 @@
                                 
                                 <div class="row flex-xl-nowrap">
                                     
-                                    <div class="docs-toc col-xl-3  visually-hidden  d-xl-block"><toc>
+                                    <div class="docs-toc col-xl-3 visually-hidden visually-hidden  d-xl-block"><toc>
     <div class="fw-bold text-uppercase mb-2">On this page</div>
     <nav id="toc"></nav>
     </toc></div>
                                     
                                     
-                                    <div class="docs-toc-mobile  visually-hidden  d-print-none d-xl-none">
+                                    <div class="docs-toc-mobile visually-hidden visually-hidden  d-print-none d-xl-none">
                                         <button id="toc-dropdown-btn" class="btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-offset="0,0" aria-expanded="false">
                                             Table of Contents
                                         </button>
@@ -440,101 +430,39 @@
                                         <div class="mb-0 d-flex">
                                             
                                             <h1 class="content-title mb-0">
-                                                Overview
+                                                Internals
+                                                
+                                                    <span class="badge bg-default fs-6 mb-1 align-middle">DRAFT</span>
                                                 
                                             </h1>
                                         </div>
                                         
                                         <div id="content" class="main-content" data-bs-spy="scroll" data-bs-root-margin="0px 0px -65%" data-bs-target="#toc-mobile">
                                             
-    
-    <div data-prismjs-copy="" data-prismjs-copy-success="" data-prismjs-copy-error="">
-        <p>Resource plugins enable interaction with and management of various infrastructure resources. These plugins can list, create, update, delete, and watch resources, providing a seamless interface for infrastructure management within Omniview.</p>
-
-<div class="alert alert-warning d-flex" role="alert">
-  <div class="flex-shrink-1 alert-icon">
-  
-  <span class="material-icons size-20 me-2">
-  warning
-  </span></div>
-  
-  <div class="w-100">Omniview is under heavy active development - the <code>ResourcePlugin</code> SDK is subject to frequent breaking changes until the first stable release.</div>
-  </div>
-
+    <div class="row flex-xl-wrap">
+        
+        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
+            <a class="text-decoration-none text-reset" href="http://localhost:1313/docs/creating-plugins/internals/overview/">
+                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
+                    <span class="icon-color d-flex my-3">
+                        <i class="material-icons align-middle">auto_transmission</i>
+                        <span class="badge bg-default ms-2 fs-6 align-middle">DRAFT</span>
+                        
+                    </span>
+                    <div class="card-body p-0 content">
+                        <p class="fs-5 fw-semibold card-title mb-1">Overview</p>
+                        <p class="para card-text mb-0">A breakdown of the internals of how plugins work.</p>
+                    </div>
+                    
+                </div>
+            </a>
+        </div>
+        
     </div>
 
-    
-
-
-
-
-
-    
-    
-
-
-
-
-
-
-<div class="gitinfo d-flex flex-wrap justify-content-between align-items-center opacity-85 pt-3">
-    <div id="edit-this-page" class="mt-1">
-        <a href="https://github.com/omniviewdev/omniview/blob/main/content/docs/creating-plugins/resource/overview.md" alt="Overview" rel="noopener noreferrer" target="_blank">
-            
-            <span class="me-1 align-text-bottom">
-                
-                    <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-  <path d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"/>
-</svg>
-
-                
-            </span>
-            Edit this page
-            
-        </a>
-    </div>
-    
-    <div id="last-modified" class="mt-1">
-        <p class="mb-0 fw-semibold">Last updated <span
-            id="relativetime"
-            data-authdate="2024-03-12T00:02:26-0500"
-            title="12 Mar 2024, 00:02 CDT">
-            12 Mar 2024, 00:02 CDT
-        </span>. <span class="material-icons size-20 align-text-bottom opacity-75">history</span>
-        </p>
-    </div>
-    
-</div>
-
-    
-
-    
                                         </div>
                                         <div><hr class="doc-hr">
 <div id="doc-nav" class="d-print-none">
-
-	<div class="row flex-xl-nowrap ">
-	<div class="col-sm-6 pt-2 doc-next">
-		<a href="/docs/creating-plugins/api/global-configuration/">
-			<div class="card h-100 my-1">
-				<div class="card-body py-2">
-                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> 🌎 Global Configuration</p>
-					
-				</div>
-			</div>
-		</a>
-        </div>
-	<div class="col-sm-6 pt-2 doc-prev">
-		<a class="ms-auto" href="/docs/creating-plugins/metrics/overview/">
-			<div class="card h-100 my-1 text-end">
-				<div class="card-body py-2">
-                    <p class="card-title fs-5 fw-semibold lh-base mb-0">Overview <i class="material-icons align-middle">navigate_next</i></p>
-					
-				</div>
-			</div>
-		</a>
-        </div>
-	</div>
 </div></div>
                                     </div>
                                 </div>

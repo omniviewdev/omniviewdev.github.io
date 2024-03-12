@@ -6,7 +6,7 @@
     <description>Recent content on Omniview - The Integration DevOps Environment</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Mar 2024 21:12:15 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2024 12:25:00 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction</title>
@@ -20,21 +20,21 @@
       <link>http://localhost:1313/docs/getting-started/</link>
       <pubDate>Sat, 09 Mar 2024 16:53:34 -0600</pubDate>
       <guid>http://localhost:1313/docs/getting-started/</guid>
-      <description>Installation and Getting Started with Omniview linkWelcome to Omniview, the IDE designed for DevOps engineers to manage and visualize infrastructure with ease. This guide will walk you through the installation process and help you set up Omniview, ensuring you&amp;rsquo;re ready to take full advantage of its powerful features.&#xA;Installation linkOmniview supports various operating systems, including Windows, macOS, and Linux. Follow the steps below to install Omniview on your system.&#xA;Windows link Download the latest Omniview installer for Windows from the official website.</description>
+      <description>Welcome to Omniview, the IDE designed for DevOps engineers to manage and visualize infrastructure with ease. This guide will walk you through the installation process and help you set up Omniview, ensuring you&amp;rsquo;re ready to take full advantage of its powerful features.&#xA;Installation linkOmniview supports various operating systems, including Windows, macOS, and Linux. Follow the steps below to install Omniview on your system.&#xA;Windows MacOS Linux Download the latest Omniview installer for Windows from the official website.</description>
     </item>
     <item>
       <title>Key Features</title>
       <link>http://localhost:1313/docs/key-features/</link>
       <pubDate>Sat, 09 Mar 2024 16:53:23 -0600</pubDate>
       <guid>http://localhost:1313/docs/key-features/</guid>
-      <description>Key Features and Architecture of Omniview linkOmniview is designed to empower DevOps engineers with a comprehensive set of tools and functionalities, enabling effective visualization, management, and operation of infrastructure across various platforms and environments. This section outlines the key features and the underlying architecture that make Omniview a revolutionary IDE for DevOps.&#xA;Key Features linkUnified Interface linkOmniview offers a single, intuitive interface for managing all aspects of your infrastructure, from code to deployment, across different clouds and platforms.</description>
+      <description>Omniview is designed to empower DevOps engineers with a comprehensive set of tools and functionalities, enabling effective visualization, management, and operation of infrastructure across various platforms and environments. This section outlines the key features and the underlying architecture that make Omniview a revolutionary IDE for DevOps.&#xA;Key Features linkUnified Interface linkOmniview offers a single, intuitive interface for managing all aspects of your infrastructure, from code to deployment, across different clouds and platforms.</description>
     </item>
     <item>
       <title>Core Concepts</title>
       <link>http://localhost:1313/docs/core-concepts/</link>
       <pubDate>Sat, 09 Mar 2024 16:53:45 -0600</pubDate>
       <guid>http://localhost:1313/docs/core-concepts/</guid>
-      <description>Core Concepts of Omniview linkOmniview is built on a set of core concepts that guide its design, functionality, and user experience. Understanding these principles is key to leveraging Omniview to its full potential, allowing DevOps engineers to manage and visualize their infrastructure efficiently and effectively.&#xA;Modular Architecture linkOmniview&amp;rsquo;s architecture is modular, designed to be both extensible and scalable. It separates concerns between the frontend and backend, enabling a responsive user interface and robust backend services that can handle complex operations and integrations.</description>
+      <description>Omniview is built on a set of core concepts that guide its design, functionality, and user experience. Understanding these principles is key to leveraging Omniview to its full potential, allowing DevOps engineers to manage and visualize their infrastructure efficiently and effectively.&#xA;Modular Architecture linkOmniview&amp;rsquo;s architecture is modular, designed to be both extensible and scalable. It separates concerns between the frontend and backend, enabling a responsive user interface and robust backend services that can handle complex operations and integrations.</description>
     </item>
     <item>
       <title>Overview</title>
@@ -48,14 +48,56 @@
       <link>http://localhost:1313/docs/creating-plugins/api/plugin-context/</link>
       <pubDate>Mon, 11 Mar 2024 21:12:15 -0500</pubDate>
       <guid>http://localhost:1313/docs/creating-plugins/api/plugin-context/</guid>
-      <description>Structure linkEvery time functionality is called from the IDE to a plugin, a PluginContext is generated and passed throughout, providing access to the core functionality and data of Omniview. The context provides access to various aspects of the request, including the request options, authentication context, resource context, and plugin configuration.&#xA;The PluginContext struct is defined as follows:&#xA;type PluginContext struct { Context context.Context RequestID string RequesterID string RequestOptions *RequestOptions AuthContext *AuthContext ResourceContext *ResourceContext PluginConfig *PluginConfig GlobalConfig *GlobalConfig } Key Default Description Context N/A Standard context for the request, which can be used for cancellation and timeouts.</description>
+      <description>Structure linkEvery time a plugin is called by the IDE (or a by another plugin), a PluginContext is generated and passed throughout, providing access to the core functionality and data of Omniview. The context provides access to various aspects of the request, including the request options, authentication context, resource context, and plugin configuration.&#xA;The PluginContext struct is defined as follows:&#xA;type PluginContext struct { Context context.Context RequestID string RequesterID string RequestOptions *RequestOptions AuthContext *AuthContext ResourceContext *ResourceContext PluginConfig *PluginConfig GlobalConfig *GlobalConfig } Key Default Description Context N/A Standard context for the request, which can be used for cancellation and timeouts.</description>
+    </item>
+    <item>
+      <title>🌎 Global Configuration</title>
+      <link>http://localhost:1313/docs/creating-plugins/api/global-configuration/</link>
+      <pubDate>Mon, 11 Mar 2024 21:12:47 -0500</pubDate>
+      <guid>http://localhost:1313/docs/creating-plugins/api/global-configuration/</guid>
+      <description>The following is a reference for the global configuration available to plugins within Omniview. Each section provides a description of the configuration options and their default values.&#xA;The global configuration can also be found on the Settings page by clicking the gear icon in the top right corner of the Omniview interface. The identifiers can be enabled in the UI under the Development section of the configuration area.&#xA;warning Omniview is under heavy active development - as such, the global configuration is subject to frequent breaking changes until the first stable release.</description>
+    </item>
+    <item>
+      <title>Overview</title>
+      <link>http://localhost:1313/docs/creating-plugins/resource/overview/</link>
+      <pubDate>Sat, 09 Mar 2024 16:57:24 -0600</pubDate>
+      <guid>http://localhost:1313/docs/creating-plugins/resource/overview/</guid>
+      <description>Resource plugins enable interaction with and management of various infrastructure resources. These plugins can list, create, update, delete, and watch resources, providing a seamless interface for infrastructure management within Omniview.&#xA;warning Omniview is under heavy active development - the ResourcePlugin SDK is subject to frequent breaking changes until the first stable release. </description>
+    </item>
+    <item>
+      <title>Overview</title>
+      <link>http://localhost:1313/docs/creating-plugins/metrics/overview/</link>
+      <pubDate>Sat, 09 Mar 2024 16:57:24 -0600</pubDate>
+      <guid>http://localhost:1313/docs/creating-plugins/metrics/overview/</guid>
+      <description>Metric plugins provide capabilities for querying and visualizing metrics. These plugins are crucial for monitoring the performance and health of infrastructure and applications.&#xA;warning Omniview is under heavy active development - the MetricsPlugin SDK is subject to frequent breaking changes until the first stable release. </description>
+    </item>
+    <item>
+      <title>Overview</title>
+      <link>http://localhost:1313/docs/creating-plugins/exec/overview/</link>
+      <pubDate>Sat, 09 Mar 2024 16:57:24 -0600</pubDate>
+      <guid>http://localhost:1313/docs/creating-plugins/exec/overview/</guid>
+      <description>Exec plugins provide capabilities for executing commands and providing shell access to resources. Exec plugins provide a means to authenticate to a machine that can be used to execute commands. This is useful for tasks such as running scripts, gathering information, or executing commands on remote systems.&#xA;The Omniview core provides two primary built-in exec plugins:&#xA;Local SSH However, you can also create custom exec plugins to support other protocols or systems.</description>
+    </item>
+    <item>
+      <title>Overview</title>
+      <link>http://localhost:1313/docs/creating-plugins/log/overview/</link>
+      <pubDate>Sat, 09 Mar 2024 16:57:24 -0600</pubDate>
+      <guid>http://localhost:1313/docs/creating-plugins/log/overview/</guid>
+      <description>Log plugins provide capabilities for querying and visualizing logs against resources, connecting to various log backends to provide a unified view of logs across different systems.&#xA;warning Omniview is under heavy active development - the LogPlugin SDK is subject to frequent breaking changes until the first stable release. </description>
+    </item>
+    <item>
+      <title>Overview</title>
+      <link>http://localhost:1313/docs/creating-plugins/internals/overview/</link>
+      <pubDate>Tue, 12 Mar 2024 12:25:00 -0500</pubDate>
+      <guid>http://localhost:1313/docs/creating-plugins/internals/overview/</guid>
+      <description>Plugins are a core part of the Omniview ecosystem, and the plugin engine is designed to be both flexible and extendable.</description>
     </item>
     <item>
       <title>Philosphy</title>
       <link>http://localhost:1313/docs/philosphy/</link>
       <pubDate>Sat, 09 Mar 2024 16:53:16 -0600</pubDate>
       <guid>http://localhost:1313/docs/philosphy/</guid>
-      <description>Philosophy and Strategic Overview of Omniview linkExecutive Summary linkOmniview is poised to revolutionize the DevOps landscape by offering an integrated development environment (IDE) uniquely tailored for DevOps engineers. Drawing inspiration from industry stalwarts like VSCode for its extensibility, Grafana for its visualization capabilities, and Terraform for its infrastructure as code (IaC) management, Omniview amalgamates these aspects into a singular, cohesive platform. Our mission is to empower DevOps professionals with a tool that enhances their workflow efficiency, simplifies infrastructure management, and accelerates the deployment lifecycle, all within a familiar yet powerful interface.</description>
+      <description>Executive Summary linkOmniview is poised to revolutionize the DevOps landscape by offering an integrated development environment (IDE) uniquely tailored for DevOps engineers. Drawing inspiration from industry stalwarts like VSCode for its extensibility, Grafana for its visualization capabilities, and Terraform for its infrastructure as code (IaC) management, Omniview amalgamates these aspects into a singular, cohesive platform. Our mission is to empower DevOps professionals with a tool that enhances their workflow efficiency, simplifies infrastructure management, and accelerates the deployment lifecycle, all within a familiar yet powerful interface.</description>
     </item>
   </channel>
 </rss>

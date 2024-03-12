@@ -35,7 +35,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/docs/creating-plugins/overview/" /><meta property="og:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_8702216724289359047.png"/><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2024-03-11T21:10:42-05:00" />
-<meta property="article:modified_time" content="2024-03-11T21:10:42-05:00" /><meta name="twitter:card" content="summary_large_image"/>
+<meta property="article:modified_time" content="2024-03-12T00:02:26-05:00" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://localhost:1313/opengraph/card-base-2_hu06b1a92291a380a0d2e0ec03dab66b2f_17642_filter_8702216724289359047.png"/>
 <meta name="twitter:title" content="Overview"/>
 <meta name="twitter:description" content="An overview of the plugin system"/>
@@ -149,6 +149,11 @@
                                                                 <li class=" "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/api/global-configuration/">🌎 Global Configuration</a></li>
                                                             
                                                         
+                                                            
+                                                            
+                                                                <li class=" "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/api/plugin-definition/">⚙️  Plugin Definition</a></li>
+                                                            
+                                                        
                                                     </ul>
                                                 </div>
                                             </li>
@@ -243,6 +248,26 @@
                                                 </button>
                                                 <div class="sidebar-submenu ">
                                                     <ul>
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        
+                                    
+                                        
+                                        
+                                            <li class="sidebar-dropdown nested  ">
+                                                <button class="btn">
+                                                    
+                                                    Internals
+                                                </button>
+                                                <div class="sidebar-submenu ">
+                                                    <ul>
+                                                        
+                                                            
+                                                            
+                                                                <li class=" "><a class="sidebar-nested-link" href="http://localhost:1313/docs/creating-plugins/internals/overview/">The Plugin Engine</a></li>
+                                                            
                                                         
                                                     </ul>
                                                 </div>
@@ -551,6 +576,49 @@
 <p>This document serves as a foundational guide for understanding the capabilities and potential of Omniview&rsquo;s plugin system. As the ecosystem grows, we anticipate new types of plugins and use cases will emerge, further extending Omniview&rsquo;s versatility and utility for DevOps professionals.</p>
 
     </div>
+
+    
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+<div class="gitinfo d-flex flex-wrap justify-content-between align-items-center opacity-85 pt-3">
+    <div id="edit-this-page" class="mt-1">
+        <a href="https://github.com/omniviewdev/omniview/blob/main/content/docs/creating-plugins/overview.md" alt="Overview" rel="noopener noreferrer" target="_blank">
+            
+            <span class="me-1 align-text-bottom">
+                
+                    <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+  <path d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"/>
+</svg>
+
+                
+            </span>
+            Edit this page
+            
+        </a>
+    </div>
+    
+    <div id="last-modified" class="mt-1">
+        <p class="mb-0 fw-semibold">Last updated <span
+            id="relativetime"
+            data-authdate="2024-03-12T00:02:26-0500"
+            title="12 Mar 2024, 00:02 CDT">
+            12 Mar 2024, 00:02 CDT
+        </span>. <span class="material-icons size-20 align-text-bottom opacity-75">history</span>
+        </p>
+    </div>
+    
+</div>
 
     
 
@@ -879,6 +947,27 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
     
@@ -960,6 +1049,15 @@
     index.add(
             {
                 id:  8 ,
+                href: "\/docs\/creating-plugins\/api\/plugin-definition\/",
+                title: "⚙️  Plugin Definition",
+                description: "Reference for the plugin definition file.",
+                content: "The following is a reference for the plugin definition file. This file is used to define the plugin’s metadata and capabilities.\nwarning Omniview is under heavy active development - as such, the plugin definition is subject to frequent breaking changes until the first stable release. Key Type Description "
+            }
+        );
+    index.add(
+            {
+                id:  9 ,
                 href: "\/docs\/creating-plugins\/resource\/",
                 title: "Resource Plugins",
                 description: "Resource plugins enable interaction with and management of various infrastructure resources.",
@@ -968,7 +1066,7 @@
         );
     index.add(
             {
-                id:  9 ,
+                id:  10 ,
                 href: "\/docs\/creating-plugins\/resource\/overview\/",
                 title: "Overview",
                 description: "Resource plugins enable interaction with and management of various infrastructure resources.",
@@ -977,7 +1075,7 @@
         );
     index.add(
             {
-                id:  10 ,
+                id:  11 ,
                 href: "\/docs\/creating-plugins\/",
                 title: "Creating Plugins",
                 description: "Learn how to create custom plugins to extend the functionality of Omniview.",
@@ -986,7 +1084,7 @@
         );
     index.add(
             {
-                id:  11 ,
+                id:  12 ,
                 href: "\/docs\/creating-plugins\/exec\/",
                 title: "Exec Plugins",
                 description: "Exec plugins provide capabilities for executing commands on remote systems.",
@@ -995,7 +1093,7 @@
         );
     index.add(
             {
-                id:  12 ,
+                id:  13 ,
                 href: "\/docs\/creating-plugins\/metrics\/overview\/",
                 title: "Overview",
                 description: "Metrics plugins provide capabilities providing metrics to reosurces.",
@@ -1004,7 +1102,7 @@
         );
     index.add(
             {
-                id:  13 ,
+                id:  14 ,
                 href: "\/docs\/creating-plugins\/log\/",
                 title: "Log Plugins",
                 description: "Log plugins provide capabilities for querying and visualizing logs.",
@@ -1013,16 +1111,16 @@
         );
     index.add(
             {
-                id:  14 ,
+                id:  15 ,
                 href: "\/docs\/creating-plugins\/exec\/overview\/",
                 title: "Overview",
                 description: "Exec plugins provide capabilities for executing commands and providing shell access to resources.",
-                content: "Exec plugins provide capabilities for executing commands and providing shell access to resources. Exec plugins provide a means to authenticate to a machine that can be used to execute commands. This is useful for tasks such as running scripts, gathering information, or executing commands on remote systems.\nThe Omniview core provides three primary built-in exec plugins:\nLocal SSH Docker However, you can also create custom exec plugins to support other protocols or systems. For example:\nAWS Session Manager Azure Cloud Shell Kubernetes Exec The ExecPlugin SDK provides a set of interfaces and types that you can use to create custom exec plugins. In the following section, we’ll go through how to use the ExecPlugin SDK to recreate the SSH exec plugin.\ninfo Omniview is under heavy active development - the ExecPlugin SDK is subject to frequent breaking changes until the first stable release. "
+                content: "Exec plugins provide capabilities for executing commands and providing shell access to resources. Exec plugins provide a means to authenticate to a machine that can be used to execute commands. This is useful for tasks such as running scripts, gathering information, or executing commands on remote systems.\nThe Omniview core provides two primary built-in exec plugins:\nLocal SSH However, you can also create custom exec plugins to support other protocols or systems. For example:\nAWS Session Manager Kubernetes Exec The ExecPlugin SDK provides a set of interfaces and types that you can use to create custom exec plugins. In the following section, we’ll go through how to use the ExecPlugin SDK to recreate the SSH exec plugin.\nOmniview is under heavy active development - the ExecPlugin SDK is subject to frequent breaking changes until the first stable release. "
             }
         );
     index.add(
             {
-                id:  15 ,
+                id:  16 ,
                 href: "\/docs\/creating-plugins\/log\/overview\/",
                 title: "Overview",
                 description: "Log plugins provide capabilities for querying and visualizing logs against resources, connecting to various log backends.",
@@ -1031,7 +1129,7 @@
         );
     index.add(
             {
-                id:  16 ,
+                id:  17 ,
                 href: "\/docs\/creating-plugins\/metrics\/",
                 title: "Metrics Plugins",
                 description: "Metrics plugins provide capabilities for querying and visualizing metrics.",
@@ -1040,7 +1138,7 @@
         );
     index.add(
             {
-                id:  17 ,
+                id:  18 ,
                 href: "\/docs\/creating-plugins\/event\/",
                 title: "Event Plugins",
                 description: "Event plugins provide capabilities for querying and providing hook points for events within resource backends.",
@@ -1049,7 +1147,25 @@
         );
     index.add(
             {
-                id:  18 ,
+                id:  19 ,
+                href: "\/docs\/creating-plugins\/internals\/",
+                title: "Internals",
+                description: "A breakdown of the internals of how plugins work.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  20 ,
+                href: "\/docs\/creating-plugins\/internals\/overview\/",
+                title: "The Plugin Engine",
+                description: "A breakdown of the internals of how plugins work.",
+                content: "Plugins are a core part of the Omniview ecosystem, and the plugin engine is designed to be both flexible and extendable. In order to satisfy the various requirements of various plugin types, the core engine embeds various controllers, engines, and interfaces to provide a consistent and reliable experience for plugin developers and users.\nAt it’s core, a plugin consists of a few key components:\nPlugin Definition linkThe plugin definition includes metadata that defines the details and capabilities of the plugin, including the name, description, type, and other details. This is stored in a plugin.yaml file, and is used by the plugin host to load, verify, and execute the plugin.\nThe plugin definition can be found here with all of it’s options.\nPlugin Host linkEach plugin that requires a backend runs a separate instance of the plugin host, which the core plugin subsystem is responsible for loading and executing. The plugin host is only responsible for managing it’s own lifecycle.\nUnder the hood, the system uses the go-plugin package by HashiCorp to provide a secure and reliable runtime environment for the plugin. This package provides a secure and reliable way to execute plugins, and is designed to be both flexible and extendable. When a plugin is launched, it does the following steps internally:\nReads in the plugin definition and verifies it’s integrity. Validates the required components are provided and are in the correct format according to the plugin definition. Starts the plugin host on a subprocess, which: Generates a handshake configuration Establishes a secure connection with the plugins Starts a gRPC server to handle incoming requests Establishes a Unix socket for the plugin to communicate with the host Why not use the native Go plugin package? linkGo added a native plugin system in Go 1.8, which allows for the loading of Go code at runtime. However, this system has a few limitations that make it unsuitable for the Omniview plugin system:\nIt requires the plugin to be compiled with the same version of Go as the host, which is not always possible Runtime panics in the plugin can crash the host It is not (at the time of writing) supported on Windows However, this does not mean that the go-plugin package is a perfect solution. It has it’s own limitations and drawbacks (mostly around the performance of communication over RPC vs native function calls), but it allows plugin maintainers to not have to worry about OS and Go version compatibility, and opens the door for future functionality, including:\nDynamically sandboxing capabilities for plugins Writing backend plugins in other languages (such as Typescript, Rust, etc.) Additional runtime contracts and guarantees for plugin execution info We are constantly assessing the plugin subsystem within Omniview. If you have ideas on how to make the subsystem better, we would love your feedback UI Components linkSome plugins require a UI component to be displayed in the IDE. These components are loaded and managed by the UI subsystem, and are responsible for rendering and managing the UI components of the plugin.\nUI components are written in React, and lazily loaded into a rendering view boundary of the main plugin window on demand. This allows for a more responsive and efficient user experience, as only the components that are currently visible are loaded and rendered.\nPlugins that do not require a UI component are not required to implement this component, including:\nExec plugins Log plugins The structure of the UI components folder within a plugin can be found here.\n"
+            }
+        );
+    index.add(
+            {
+                id:  21 ,
                 href: "\/docs\/philosphy\/",
                 title: "Philosphy",
                 description: "Executive Summary linkOmniview is poised to revolutionize the DevOps landscape by offering an integrated development environment (IDE) uniquely tailored for DevOps engineers. Drawing inspiration from industry stalwarts like VSCode for its extensibility, Grafana for its visualization capabilities, and Terraform for its infrastructure as code (IaC) management, Omniview amalgamates these aspects into a singular, cohesive platform. Our mission is to empower DevOps professionals with a tool that enhances their workflow efficiency, simplifies infrastructure management, and accelerates the deployment lifecycle, all within a familiar yet powerful interface.",
@@ -1058,7 +1174,7 @@
         );
     index.add(
             {
-                id:  19 ,
+                id:  22 ,
                 href: "\/docs\/",
                 title: "Docs",
                 description: "",
